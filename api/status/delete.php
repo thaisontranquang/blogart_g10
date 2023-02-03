@@ -2,7 +2,7 @@
 
 require_once $_SERVER['DOCUMENT_ROOT'] . '/config.php';
 
-$libStat = $_POST['libStat'];
-sql_insert('STATUT', 'libStat', "'$libStat'");
+$numStat = $_POST['numStat'];
+sql_delete('STATUT', "numStat = $numStat");
 
 header('Location: ../../views/backend/status/list.php');
