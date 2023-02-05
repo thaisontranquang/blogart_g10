@@ -1,16 +1,14 @@
 <?php
 include '../../../header.php';
 //Security check
-//Level 1 mean administrator in DB
-/* if (!check_access(1)); {
-    header('Location :/'); //Redirect to home
+//Level 1 mean administator in DB
+/* if (!check_access(1)) {
+    header('Location: /'); //Redirect to home
     exit();
-}
-*/
+} */
 
 $numStat = $_GET['numStat'];
-$libStat = sql_select('STATUT', 'libStat', "numStat = $numStat")[0]['libStat'];
-
+$libStat = sql_select("STATUT", "libStat", "numStat = $numStat")[0]['libStat'];
 
 ?>
 
@@ -24,12 +22,12 @@ $libStat = sql_select('STATUT', 'libStat', "numStat = $numStat")[0]['libStat'];
             <!--Form to create a new status-->
             <form action="<?php echo ROOT_URL . '/api/status/delete.php' ?>" method="post">
                 <div class="form-group">
-                    <label for="libStat">Delete status :</label>
-                    <input id="numStat" class="form-control" style="display:none" type="text" name="numStat" value="<?php echo($numStat)?>" readonly="readonly">
-                    <input id="libStat" class="form-control" type="text" name="libStat" value="<?php echo($libStat)?>" disabled>
+                    <label for="libStat">libStat</label>
+                    <input id="numStat" class="form-control" style="display: none" type="text" name="numStat" value="<?php echo($numStat) ?>" readonly="readonly">
+                    <input id="libStat" class="form-control" type="text" name="libStat" value="<?php echo($libStat) ?>" readonly="readonly">
                 </div>
                 <div class="form-group mt-2">
-                    <button type="submit" class="btn btn-danger">Confirm deletion</button>
+                    <button type="submit" class="btn btn-danger">Confirm deletion ?</button>
                 </div>
             </form>
         </div>
