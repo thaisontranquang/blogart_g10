@@ -32,7 +32,7 @@ $statuses = sql_select("STATUT", "*");
                             <td><?php echo $status['numStat']; ?></td>
                             <td><?php echo $status['libStat']; ?></td>
                             <td>
-                                <a href="edit.php?numStat=<?php echo $status['numStat']; ?>" class="btn btn-primary">Edit</a>
+                                <a href="update.php?numStat=<?php echo $status['numStat']; ?>" class="btn btn-primary">Edit</a>
                                 <a href="delete.php?numStat=<?php echo $status['numStat']; ?>" class="btn btn-danger">Delete</a>
                             </td>
                         </tr>

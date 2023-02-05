@@ -26,9 +26,7 @@ include '../../header.php';
                             <td>Status</td>
                             <td>
                                 <a href="/views/backend/status/list.php" class="btn btn-primary">List</a>
-                                <a href="/views/backend/status/create.php" class="btn btn-success">Create</a>
-                                <a href="/views/backend/status/edit.php" class="btn btn-warning">Edit</a>
-                                <a href="/views/backend/status/delete.php" class="btn btn-danger">Delete</a>
+                                <a href="/views/backend/status/create.php" class="btn btn-success">Create new status</a>
                             </td>
                             <td>
                                 <p>Exemple fournis s'y referer pour travailler</p>
