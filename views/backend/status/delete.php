@@ -1,7 +1,7 @@
 <?php
 include '../../../header.php';
 
-$numStat = $_GET['id'];
+$numStat = $_POST['id'];
 $libStat = sql_select('STATUT', 'libStat', "numStat = $numStat")[0]['libStat'];
 
 
