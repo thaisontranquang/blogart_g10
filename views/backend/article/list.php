@@ -29,11 +29,11 @@ $articles = sql_select("ARTICLE", "*");
                 <tbody>
                     <?php foreach ($articles as $article) { ?>
                         <tr>
-                            <td><?php echo $article['numStat']; ?></td>
-                            <td><?php echo $article['libStat']; ?></td>
+                            <td><?php echo $article['numArt']; ?></td>
+                            <td><?php echo $article['libTitrArt']; ?></td>
                             <td>
-                                <a href="update.php?numStat=<?php echo $article['numStat']; ?>" class="btn btn-primary">Edit</a>
-                                <a href="delete.php?numStat=<?php echo $article['numStat']; ?>" class="btn btn-danger">Delete</a>
+                                <a href="update.php?numArt=<?php echo $article['numArt']; ?>" class="btn btn-primary">Edit</a>
+                                <a href="delete.php?numArt=<?php echo $article['numArt']; ?>" class="btn btn-danger">Delete</a>
                             </td>
                         </tr>
                     <?php } ?>
