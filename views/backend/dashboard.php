@@ -35,20 +35,18 @@ include '../../header.php';
                         <tr>
                             <td>Members</td>
                             <td>
-                                <a href="/views/backend/members/list.php" class="btn btn-primary disabled">List</a>
-                                <a href="/views/backend/members/create.php" class="btn btn-success disabled">Create</a>
-                                <a href="/views/backend/members/edit.php" class="btn btn-warning disabled">Edit</a>
-                                <a href="/views/backend/members/delete.php" class="btn btn-danger disabled">Delete</a>
+                                <a href="/views/backend/member/list.php" class="btn btn-primary">List</a>
+                                <a href="/views/backend/member/create.php" class="btn btn-success">Create a new member</a>
                             </td>
                             <td>Attention, il faut aussi gérer la partie inscription/connection et la sécurité</td>
                         </tr>
                         <tr>
                             <td>Articles</td>
                             <td>
-                                <a href="/views/backend/articles/list.php" class="btn btn-primary disabled">List</a>
-                                <a href="/views/backend/articles/create.php" class="btn btn-success disabled">Create</a>
-                                <a href="/views/backend/articles/edit.php" class="btn btn-warning disabled">Edit</a>
-                                <a href="/views/backend/articles/delete.php" class="btn btn-danger disabled">Delete</a>
+                                <a href="/views/backend/article/list.php" class="btn btn-primary">List</a>
+                                <a href="/views/backend/article/create.php" class="btn btn-success">Create</a>
+                                <a href="/views/backend/article/edit.php" class="btn btn-warning">Edit</a>
+                                <a href="/views/backend/article/delete.php" class="btn btn-danger">Delete</a>
                             </td>
                             <td></td>
                         </tr>

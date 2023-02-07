@@ -16,7 +16,7 @@ $libStat = sql_select("STATUT", "libStat", "numStat = $numStat")[0]['libStat'];
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <h1>Delete Status</h1>
+            <h1>Edit Status</h1>
         </div>
         <div class="col-md-12">
             <!--Form to create a new status-->
