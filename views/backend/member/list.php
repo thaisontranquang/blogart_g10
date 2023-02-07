@@ -22,8 +22,8 @@ $members = sql_select("MEMBRE", "*");
                 <thead>
                     <tr>
                         <th>Number of member</th>
-                        <th>Name</th>
-                        <th>Surname</th>
+                        <th>Prénom</th>
+                        <th>Nom</th>
                         <th>Pseudo</th>
                         <th>Password</th>
                         <th>Email</th>
