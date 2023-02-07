@@ -17,10 +17,11 @@ $members = sql_select("MEMBRE", "*");
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <h1>Status</h1>
+            <h1>Members</h1>
             <table class="table table-striped">
                 <thead>
                     <tr>
+                        <th>Number of member</th>
                         <th>Name</th>
                         <th>Surname</th>
                         <th>Pseudo</th>
@@ -29,16 +30,19 @@ $members = sql_select("MEMBRE", "*");
                     </tr>
                 </thead>
                 <tbody>
-                    <?php foreach ($members as $status) { ?>
+                    <?php foreach ($members as $member) { ?>
                         <tr>
-                            <td><?php echo $status['prenomMemb']; ?></td>
-                            <td><?php echo $status['nomMemb']; ?></td>
-                            <td><?php echo $status['pseudoMemb']; ?></td>
-                            <td><?php echo $status['passMemb']; ?></td>
-                            <td><?php echo $status['eMailMemb']; ?></td>
+                            <td><?php echo $member['numMemb']; ?></td>
+                            <td><?php echo $member['prenomMemb']; ?></td>
+                            <td><?php echo $member['nomMemb']; ?></td>
+                            <td><?php echo $member['pseudoMemb']; ?></td>
+                            <td><?php echo $member['passMemb']; ?></td>
+                            <td><?php echo $member['eMailMemb']; ?></td>
+                            <td><?php echo $member['dtCreaMemb']; ?></td>     
+                            <td><?php echo $member['numStat']; ?></td>
                             <td>
-                                <a href="update.php?numStat=<?php echo $status['numStat']; ?>" class="btn btn-primary">Edit</a>
-                                <a href="delete.php?numStat=<?php echo $status['numStat']; ?>" class="btn btn-danger">Delete</a>
+                                <a href="edit.php?numMemb=php echo $members['numMemb']; ?>" class="btn btn-primary">Edit</a>
+                                <a href="delete.php?numMemb=php echo $members['numMemb']; ?>" class="btn btn-danger">Delete</a>
                             </td>
                         </tr>
                     <?php } ?>

@@ -13,3 +13,5 @@ $libConclArt = $_POST["libConclArt"];
 $urlPhotArt = $_POST["urlPhotArt"];
 sql_update('ARTICLE', "libTitrArt = '$libTitrArt', libChapoArt = '$libChapoArt', parag1Art = '$parag1Art', libSsTitr1Art = '$libSsTitr1Art', parag2Art = '$parag2Art', libSsTitr2Art = '$libSsTitr2Art', parag3Art = '$parag3Art', libConclArt = '$libConclArt', urlPhotArt = '$urlPhotArt', numThem = '1'", "numArt = $numArt");
 header('Location: ../../views/backend/article/list.php');
+
+?>

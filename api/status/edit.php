@@ -8,3 +8,5 @@ sql_update('STATUT', "libStat = '$libStat'", "numstat = $numStat");
 
 
 header('Location: ../../views/backend/status/list.php');
+
+?>

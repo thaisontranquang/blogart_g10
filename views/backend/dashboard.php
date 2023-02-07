@@ -35,10 +35,8 @@ include '../../header.php';
                         <tr>
                             <td>Members</td>
                             <td>
-                                <a href="/views/backend/members/list.php" class="btn btn-primary">List</a>
-                                <a href="/views/backend/members/create.php" class="btn btn-success">Create</a>
-                                <a href="/views/backend/members/edit.php" class="btn btn-warning">Edit</a>
-                                <a href="/views/backend/members/delete.php" class="btn btn-danger">Delete</a>
+                                <a href="/views/backend/member/list.php" class="btn btn-primary">List</a>
+                                <a href="/views/backend/member/create.php" class="btn btn-success">Create a new member</a>
                             </td>
                             <td>Attention, il faut aussi gérer la partie inscription/connection et la sécurité</td>
                         </tr>
