@@ -12,11 +12,11 @@ include '../../../header.php';
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <h1>Create new member</h1>
+            <h1>Create new comment</h1>
         </div>
         <div class="col-md-12">
             <!--Form to create a new member-->
-            <form action="<?php echo ROOT_URL . '/api/member/create.php' ?>" method="post">
+            <form action="<?php echo ROOT_URL . '/api/comment/create.php' ?>" method="post">
                 <div class="form-group">
                     <label for="prenomMemb">Prénom</label>
                     <input id="prenomMemb" class="form-control" type="text" placeholder="Entrez votre prénom" name="prenomMemb" required>
