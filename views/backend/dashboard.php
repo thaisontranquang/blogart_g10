@@ -44,9 +44,8 @@ include '../../header.php';
                             <td>Articles</td>
                             <td>
                                 <a href="/views/backend/article/list.php" class="btn btn-primary">List</a>
-                                <a href="/views/backend/article/create.php" class="btn btn-success">Create</a>
-                                <a href="/views/backend/article/edit.php" class="btn btn-warning">Edit</a>
-                                <a href="/views/backend/article/delete.php" class="btn btn-danger">Delete</a>
+                                <a href="/views/backend/article/create.php" class="btn btn-success">Create a new article</a>
+
                             </td>
                             <td></td>
                         </tr>

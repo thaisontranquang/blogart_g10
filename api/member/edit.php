@@ -9,7 +9,7 @@ $passMemb = $_POST['passMemb'];
 $eMailMemb = $_POST['eMailMemb'];
 
 
-sql_update('MEMBRE',"numMemb = '$numMemb'","prenomMemb = '$prenomMemb'", "nomMemb = $nomMemb", "pseudoMemb = '$pseudoMemb'","eMailMemb = '$eMailMemb","passMemb ='$passMemb'");
+sql_update('MEMBRE',"prenomMemb = '$prenomMemb', nomMemb = '$nomMemb', pseudoMemb = '$pseudoMemb',eMailMemb = '$eMailMemb', passMemb ='$passMemb'","numMemb = '$numMemb'");
 
 
 header('Location: ../../views/backend/member/list.php');

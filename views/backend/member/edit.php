@@ -28,7 +28,6 @@ $passMemb = sql_select("MEMBRE","passMemb", "numMemb = $numMemb")[0]['passMemb']
             <form action="<?php echo ROOT_URL . '/api/member/edit.php' ?>" method="post">
                 <div class="form-group">
                     
-                <label for="pseudoMemb">Membre</label>
                     <input id="numMemb" class="form-control" style="display:none" type="text" name="numMemb" value="<?php echo($numMemb) ?>" readoly="readonly">
                     
                     <label for="prenomMemb">Prénom</label>
