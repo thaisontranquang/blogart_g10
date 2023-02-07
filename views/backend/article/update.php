@@ -30,10 +30,9 @@ $urlPhotArt = sql_select("ARTICLE", "urlPhotArt", "numArt = $numArt")[0]['urlPho
             <!--Form to create a new article-->
             <form action="<?php echo ROOT_URL . '/api/article/edit.php' ?>" method="post">
                 <input id="numArt" class="form-control" style="display: none" type="text" name="numArt" value="<?php echo($numArt) ?>" readonly="readonly">
-                <input id="numStat" class="form-control" style="display: none" type="text" name="numStat" value="<?php echo($numStat) ?>" readonly="readonly">
                 
                 <div class="form-group">                    
-                    <label for="libTitrArt">libTitrArt</label>
+                    <label for="libTitrArt">Titre</label>
                     <input id="libTitrArt" class="form-control" type="text" placeholder="Entrez votre titre" name="libTitrArt" value="<?php echo($libTitrArt) ?>">
                 </div>
 
