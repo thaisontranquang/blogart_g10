@@ -12,14 +12,14 @@ $libStat = sql_select("STATUT", "libStat", "numStat = $numStat")[0]['libStat'];
 
 ?>
 
-<!--Bootstrap form to create a new status-->
+<!--Bootstrap form to delete a member-->
 <div class="container">
     <div class="row">
         <div class="col-md-12">
             <h1>Delete Status</h1>
         </div>
         <div class="col-md-12">
-            <!--Form to create a new status-->
+            <!--Form to delete a member-->
             <form action="<?php echo ROOT_URL . '/api/status/delete.php' ?>" method="post">
                 <div class="form-group">
                     <label for="libStat">libStat</label>
