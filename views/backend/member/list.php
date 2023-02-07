@@ -41,8 +41,8 @@ $members = sql_select("MEMBRE", "*");
                             <td><?php echo $member['dtCreaMemb']; ?></td>     
                             <td><?php echo $member['numStat']; ?></td>
                             <td>
-                                <a href="edit.php?numMemb=php echo $members['numMemb']; ?>" class="btn btn-primary">Edit</a>
-                                <a href="delete.php?numMemb=php echo $members['numMemb']; ?>" class="btn btn-danger">Delete</a>
+                                <a href="edit.php?numMemb=<?php echo $member['numMemb']; ?>" class="btn btn-primary">Edit</a>
+                                <a href="delete.php?numMemb=<?php echo $member['numMemb']; ?>" class="btn btn-danger">Delete</a>
                             </td>
                         </tr>
                     <?php } ?>
