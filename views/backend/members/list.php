@@ -29,7 +29,7 @@ $members = sql_select("MEMBRE", "*");
                     </tr>
                 </thead>
                 <tbody>
-                    <?php foreach ($members as $status) { ?>
+                    <?php foreach ($members as $members) { ?>
                         <tr>
                             <td><?php echo $status['prenomMemb']; ?></td>
                             <td><?php echo $status['nomMemb']; ?></td>
