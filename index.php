@@ -1,5 +1,8 @@
 <?php require_once 'header.php';
 sql_connect();
+
+$articles = sql_select("ARTICLE", "*", "", "numArt DESC", 2);
+
 ?>
 
 <section class="header">
@@ -12,29 +15,26 @@ sql_connect();
 <section class="news-login">
     <div class="container">
         <div class="row">
-            <div class="col-md-auto">
+            <div class="col-xl-9 col-md-12">
                 <h2>Derniers articles</h2>
+                <?php
+            foreach ($articles as $article) {
+                echo ('
                 <div class="card">
                     <img src="/src/images/index.jpeg" class="card-img-top" alt="Image dernière actualité">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <h6>Card title</h6>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn">Go somewhere <img src="/src/images/chevron_right_FILL0_wght400_GRAD0_opsz48.svg"></a>
+                        <h5 class="card-title">' . $article['libTitrArt'] . '</h5>
+                        <h6>le ' . $article['dtCreArt'] . '</h6>
+                        <p class="card-text">' . substr($article['libChapoArt'], 0, 500) . ' ...' . '</p>
+                        <a href="#" class="btn">Go somewhere <img src="/src/images/chevron_right_FILL0_wght400_GRAD0_opsz48.svg" alt="Lire l\'article ?"></a>
                     </div>
                 </div>
-                <div class="card">
-                    <img src="/src/images/Chaton.jpeg" class="card-img-top" alt="Image avant-dernière actualité">
-                    <div class="card-body">
-                        <h5 class="card-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque voluptate voluptates totam deleniti amet dignissimos? Amet dolorum at similique harum aliquam aperiam excepturi necessitatibus asperiores libero. Cum recusandae magnam voluptate.</h5>
-                        <h6>par <span>Nom de l'auteur</span> le xx/xx/xx </h6>
-                        <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo iusto quae aliquam at deleniti, debitis tempora fuga ratione hic, atque molestiae nemo quaerat cupiditate provident qui quas! Esse, impedit earum?
-                        </p>
-                        <a href="#" class="btn">Go somewhere <img src="/src/images/chevron_right_FILL0_wght400_GRAD0_opsz48.svg"></a>
-                    </div>
-                </div>
+                ');
+            };
+                ?>
             </div>
-            <div class="col fast-login">
+            <div class="col-xl-3 col-md-8 col-sm-12 fast-login">
+                <div>
                 <h3>Connectez-vous</h3>
                 <form action="" method="post">
                     <div class="mb-3">
@@ -57,6 +57,7 @@ sql_connect();
 
                 <h3>Pas encore de compte ?</h3>
                 <a href="#"><button type="submit" class="btn">S'inscrire</button></a>
+                </div>
             </div>
         </div>
 

@@ -38,5 +38,4 @@ mysqli_close($db); // fermer la connexion
 
 ?>
 
-
 <?php require_once '../../footer.php';
