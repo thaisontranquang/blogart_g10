@@ -44,7 +44,8 @@ include '../../header.php';
                             <td>Articles</td>
                             <td>
                                 <a href="/views/backend/article/list.php" class="btn btn-primary">List</a>
-                                <a href="/views/backend/article/create.php" class="btn btn-success">Create</a>
+                                <a href="/views/backend/article/create.php" class="btn btn-success">Create a new article</a>
+
                             </td>
                             <td></td>
                         </tr>
@@ -59,10 +60,8 @@ include '../../header.php';
                         <tr>
                             <td>Comments</td>
                             <td>
-                                <a href="/views/backend/comments/list.php" class="btn btn-primary disabled">List</a>
-                                <a href="/views/backend/comments/create.php" class="btn btn-success disabled">Create</a>
-                                <a href="/views/backend/comments/edit.php" class="btn btn-warning disabled">Edit</a>
-                                <a href="/views/backend/comments/delete.php" class="btn btn-danger disabled">Delete</a>
+                                <a href="/views/backend/comment/list.php" class="btn btn-primary">List</a>
+                                <a href="/views/backend/comment/create.php" class="btn btn-success">Create</a>
                             </td>
                             <td></td>
                         </tr>

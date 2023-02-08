@@ -16,3 +16,4 @@
 - **index.php** - Must be the homepage
 - **views** - All your pages
 - 
+

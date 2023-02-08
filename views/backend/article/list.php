@@ -22,7 +22,7 @@ $articles = sql_select("ARTICLE", "*");
                 <thead>
                     <tr>
                         <th>Id</th>
-                        <th>Name</th>
+                        <th>Nom</th>
                         <th>Actions</th>
                     </tr>
                 </thead>

@@ -21,11 +21,11 @@ $members = sql_select("MEMBRE", "*");
             <table class="table table-striped">
                 <thead>
                     <tr>
-                        <th>Number of member</th>
+                        <th>Identifiant du membre</th>
                         <th>Prénom</th>
                         <th>Nom</th>
                         <th>Pseudo</th>
-                        <th>Password</th>
+                        <th>Mot de passe</th>
                         <th>Email</th>
                     </tr>
                 </thead>
