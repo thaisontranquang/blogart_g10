@@ -6,39 +6,31 @@ include '../../../header.php';
     header('Location: /'); //Redirect to home
     exit();
 } */
+
+
+
 ?>
 
-<!--Bootstrap form to create a new member-->
+
+<!--Bootstrap form to create a new commentary   -->
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <h1>Create new comment</h1>
+            <h1>Créer un nouveau commentaire</h1>
         </div>
         <div class="col-md-12">
-            <!--Form to create a new member-->
+            <!--Form to create a new commentary -->
             <form action="<?php echo ROOT_URL . '/api/comment/create.php' ?>" method="post">
                 <div class="form-group">
-                    <label for="prenomMemb">Prénom</label>
-                    <input id="prenomMemb" class="form-control" type="text" placeholder="Entrez votre prénom" name="prenomMemb" required>
-                </div>
+                    <label for="libCom">Ecrivez votre commentaire</label>
+                    <input id="libCom" class="form-control" type="text" placeholder="Ecrivez votre commentaire" name="libCom" required>
+                </div> 
                 <div class="form-group">
-                    <label for="nomMemb">Nom</label>
-                    <input id="nomMemb" class="form-control" type="text" name="nomMemb" placeholder="Entrez votre nom" required>
-                </div>
-                <div class="form-group">
-                    <label for="pseudoMemb">Pseudo</label>
-                    <input id="pseudoMemb" class="form-control" type="text" name="pseudoMemb" placeholder="Entrez votre pseudo" required>
-                </div>
-                <div class="form-group">
-                    <label for="passMemb">Mot de passe</label>
-                    <input id="passMemb" class="form-control" type="password" name="passMemb" placeholder="Entrez votre mot de passe" required>
-                </div>
-                <div class="form-group">
-                    <label for="eMailMemb">Email</label>
-                    <input id="eMailMemb" class="form-control" type="text" name="eMailMemb" placeholder="Entrez votre email" required>
-                </div>
+                    <label for="numArt">N° de l'article</label>
+                    <input id="numArt" class="form-control" type="number" placeholder="Saisissez le numéro de l'article" name="numArt" required>
+                </div> 
                 <div class="form-group mt-2">
-                    <button type="submit" class="btn btn-primary">Create member</button>
+                    <button type="submit" class="btn btn-primary">Créer commentaire</button>
                 </div>
             </form>
         </div>

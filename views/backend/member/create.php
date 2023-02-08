@@ -6,13 +6,16 @@ include '../../../header.php';
     header('Location: /'); //Redirect to home
     exit();
 } */
+
+//Load all statuses
+$statuses = sql_select("STATUT", "*");
 ?>
 
 <!--Bootstrap form to create a new member-->
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <h1>Create new member</h1>
+            <h1>Créer un nouveau membre</h1>
         </div>
         <div class="col-md-12">
             <!--Form to create a new member-->
@@ -37,6 +40,13 @@ include '../../../header.php';
                     <label for="eMailMemb">Email</label>
                     <input id="eMailMemb" class="form-control" type="text" name="eMailMemb" placeholder="Entrez votre email" required>
                 </div>
+
+                <select name="numStat" required>
+                    <?php foreach ($statuses as $status) { ?>
+                        <option value="<?php echo $thematic['numStat']; ?>"><?php echo $thematic['libStat']; ?></option>
+                    <?php } ?>
+                </select>
+
                 <div class="form-group mt-2">
                     <button type="submit" class="btn btn-primary">Create member</button>
                 </div>

@@ -17,7 +17,7 @@ $statuses = sql_select("STATUT", "*");
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <h1>Status</h1>
+            <h1>Statuts</h1>
             <table class="table table-striped">
                 <thead>
                     <tr>

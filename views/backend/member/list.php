@@ -17,15 +17,15 @@ $members = sql_select("MEMBRE", "*");
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <h1>Members</h1>
+            <h1>Membres</h1>
             <table class="table table-striped">
                 <thead>
                     <tr>
-                        <th>Number of member</th>
+                        <th>Identifiant du membre</th>
                         <th>Prénom</th>
                         <th>Nom</th>
                         <th>Pseudo</th>
-                        <th>Password</th>
+                        <th>Mot de passe</th>
                         <th>Email</th>
                     </tr>
                 </thead>
