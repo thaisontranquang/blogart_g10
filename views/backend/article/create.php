@@ -6,6 +6,9 @@ include '../../../header.php';
     header('Location: /'); //Redirect to home
     exit();
 } */
+
+//Load all thematics
+$thematics = sql_select("THEMATIQUE", "*");
 ?>
 
 <!--Bootstrap form to create a new article-->
@@ -50,10 +53,17 @@ include '../../../header.php';
                     <label for="libConclArt">Conclusion</label>
                     <input id="libConclArt" class="form-control" type="text" placeholder="Entrez votre conclusion" required name="libConclArt">
                 </div>
-                <div class="form-group">
+
+                <select name="word" required>
+                    <?php foreach ($thematics as $thematic) { ?>
+                        <option value="<?php echo $thematic['numThem']; ?>" name="<?php echo $thematic['numThem']; ?>"><?php echo $thematic['libThem']; ?></option>
+                    <?php } ?>
+                </select>
+
+                <!-- <div class="form-group">
                     <label for="urlPhotArt">Choisir une image pour votre article</label>
                     <input id="urlPhotArt" class="form-control" type="file" accept="image/png, image/jpeg" required name="urlPhotArt">
-                </div>
+                </div> -->
 
                 <div class="form-group mt-2">
                     <button type="submit" class="btn btn-primary">Create</button>
