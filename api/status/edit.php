@@ -1,8 +1,8 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'] . '/config.php';
 
-$numStat = $_POST['numStat'];
-$libStat = $_POST['libStat'];
+$numStat = sql_escape($_POST['numStat']);
+$libStat = sql_escape($_POST['libStat']);
 
 sql_update('STATUT', "libStat = '$libStat'", "numstat = $numStat");
 
