@@ -15,7 +15,7 @@ $thematics = sql_select("THEMATIQUE", "*");
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <h1>Create new article</h1>
+            <h1>Créer un nouvel article</h1>
         </div>
         <div class="col-md-12">
             <!--Form to create a new article-->
@@ -66,7 +66,7 @@ $thematics = sql_select("THEMATIQUE", "*");
                 </div> -->
 
                 <div class="form-group mt-2">
-                    <button type="submit" class="btn btn-primary">Create</button>
+                    <button type="submit" class="btn btn-primary">Créer</button>
                 </div>
             </form>
         </div>

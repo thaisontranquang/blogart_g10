@@ -21,8 +21,8 @@ $statuses = sql_select("STATUT", "*");
             <table class="table table-striped">
                 <thead>
                     <tr>
-                        <th>Id</th>
-                        <th>Name</th>
+                        <th>Identifiant</th>
+                        <th>Nom</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
@@ -32,14 +32,14 @@ $statuses = sql_select("STATUT", "*");
                             <td><?php echo $status['numStat']; ?></td>
                             <td><?php echo $status['libStat']; ?></td>
                             <td>
-                                <a href="update.php?numStat=<?php echo $status['numStat']; ?>" class="btn btn-primary">Edit</a>
-                                <a href="delete.php?numStat=<?php echo $status['numStat']; ?>" class="btn btn-danger">Delete</a>
+                                <a href="update.php?numStat=<?php echo $status['numStat']; ?>" class="btn btn-primary">Editer</a>
+                                <a href="delete.php?numStat=<?php echo $status['numStat']; ?>" class="btn btn-danger">Supprimer</a>
                             </td>
                         </tr>
                     <?php } ?>
                 </tbody>
             </table>
-            <a href="create.php" class="btn btn-success">Create</a>
+            <a href="create.php" class="btn btn-success">Créer</a>
         </div>
     </div>
 

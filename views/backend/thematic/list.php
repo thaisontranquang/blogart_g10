@@ -17,13 +17,13 @@ $thematics = sql_select("THEMATIQUE", "*");
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <h1>Thematics</h1>
+            <h1>Thématique</h1>
             <table class="table table-striped">
                 <thead>
                     <tr>
-                        <th>Id</th>
-                        <th>Name</th>
-                        <th>Actions</th>
+                        <th>Identifiant</th>
+                        <th>Nom</th>
+                        <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -32,14 +32,14 @@ $thematics = sql_select("THEMATIQUE", "*");
                             <td><?php echo $thematic['numThem']; ?></td>
                             <td><?php echo $thematic['libThem']; ?></td>
                             <td>
-                                <a href="update.php?numThem=<?php echo $thematic['numThem']; ?>" class="btn btn-primary">Edit</a>
-                                <a href="delete.php?numThem=<?php echo $thematic['numThem']; ?>" class="btn btn-danger">Delete</a>
+                                <a href="update.php?numThem=<?php echo $thematic['numThem']; ?>" class="btn btn-primary">Editer</a>
+                                <a href="delete.php?numThem=<?php echo $thematic['numThem']; ?>" class="btn btn-danger">Supprimer</a>
                             </td>
                         </tr>
                     <?php } ?>
                 </tbody>
             </table>
-            <a href="create.php" class="btn btn-success">Create</a>
+            <a href="create.php" class="btn btn-success">Créer</a>
         </div>
     </div>
 

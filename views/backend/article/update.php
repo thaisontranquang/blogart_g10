@@ -24,7 +24,7 @@ $urlPhotArt = sql_select("ARTICLE", "urlPhotArt", "numArt = $numArt")[0]['urlPho
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <h1>Delete article</h1>
+            <h1>Supprimer l'article</h1>
         </div>
         <div class="col-md-12">
             <!--Form to create a new article-->
@@ -70,7 +70,7 @@ $urlPhotArt = sql_select("ARTICLE", "urlPhotArt", "numArt = $numArt")[0]['urlPho
                 </div>
 
                 <div class="form-group mt-2">
-                    <button type="submit" class="btn btn-danger">Confirm edit ?</button>
+                    <button type="submit" class="btn btn-danger">Confirmer l'édition ?</button>
                 </div>
             </form>
         </div>
