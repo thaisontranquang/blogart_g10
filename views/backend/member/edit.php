@@ -59,7 +59,7 @@ $statuses = sql_select("STATUT", "*");
                 </div>
                 
                 <div class="form-group mt-2">
-                    <button type="submit" class="btn btn-danger">Confirm editing ?</button>
+                    <button type="submit" class="btn btn-danger">Confirmer l'édition ?</button>
                 </div>
             </form>
         </div>

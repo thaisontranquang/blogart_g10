@@ -41,7 +41,7 @@ $numStat = sql_select("MEMBRE","numStat", "numMemb = $numMemb")[0]['numStat'];
                     <input id="numMemb" class="form-control" type="text" name="numMemb" value="<?php echo($numMemb) ?>" hidden>
                 </div>
                 <div class="form-group mt-2">
-                    <button type="submit" class="btn btn-danger">Confirm deletion ?</button>
+                    <button type="submit" class="btn btn-danger">Confirmer la suppression ?</button>
                 </div>
             </form>
         </div>

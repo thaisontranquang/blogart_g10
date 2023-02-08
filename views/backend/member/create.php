@@ -42,7 +42,7 @@ $statuses = sql_select("STATUT", "*");
                 </div>
 
                 <div class="form-group mt-2">
-                    <button type="submit" class="btn btn-primary">Create member</button>
+                    <button type="submit" class="btn btn-primary">Créer un membre</button>
                 </div>
             </form>
         </div>

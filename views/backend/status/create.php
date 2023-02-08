@@ -12,17 +12,17 @@ include '../../../header.php';
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <h1>Create new Status</h1>
+            <h1>Créer un nouveau statut</h1>
         </div>
         <div class="col-md-12">
             <!--Form to create a new status-->
             <form action="<?php echo ROOT_URL . '/api/status/create.php' ?>" method="post">
                 <div class="form-group">
-                    <label for="libStat">libStat</label>
+                    <label for="libStat">Statut</label>
                     <input id="libStat" class="form-control" type="text" name="libStat">
                 </div>
                 <div class="form-group mt-2">
-                    <button type="submit" class="btn btn-primary">Create</button>
+                    <button type="submit" class="btn btn-primary">Créer</button>
                 </div>
             </form>
         </div>
