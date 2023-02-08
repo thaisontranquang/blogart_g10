@@ -8,11 +8,11 @@ include '../../header.php';
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1>BlogArt Admin Dashboard</h1>
-                <p>Welcome to the dashboard</p>
+                <h1>Administration Blog'Art 2023</h1>
+                <p>Bienvenue sur le panneau administratif</p>
             </div>
             <div class="col-md-12">
-                <h3>Find here links to admin pages and what to do next</h3>
+
                 <table class="table table-striped">
                     <thead>
                         <tr>
@@ -28,9 +28,6 @@ include '../../header.php';
                                 <a href="/views/backend/status/list.php" class="btn btn-primary">Liste</a>
                                 <a href="/views/backend/status/create.php" class="btn btn-success">Créer un nouveau statut</a>
                             </td>
-                            <td>
-                                <p>Exemple fournis s'y réferer pour travailler</p>
-                            </td>
                         </tr>
                         <tr>
                             <td>Membres</td>
@@ -38,7 +35,6 @@ include '../../header.php';
                                 <a href="/views/backend/member/list.php" class="btn btn-primary">Liste</a>
                                 <a href="/views/backend/member/create.php" class="btn btn-success">Créer un nouveau membre</a>
                             </td>
-                            <td>Attention, il faut aussi gérer la partie inscription/connection et la sécurité</td>
                         </tr>
                         <tr>
                             <td>Articles</td>
