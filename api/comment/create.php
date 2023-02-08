@@ -3,9 +3,9 @@
 require_once $_SERVER['DOCUMENT_ROOT'] . '/config.php';
 
 $dtCreCom = $_POST['dtCreCom'];
-$ibCom = $_POST['libCom'];
+$ibCom = sql_escape($_POST['libCom']);
 $attModOk = $_POST['attModOk'];
-$notifCommKOAff = $_POST['notifCommKOAff'];
+$notifCommKOAff = sql_escape($_POST['notifCommKOAff']);
 $numArt = $_POST['numArt'];
 $numMemb = $_POST['numMemb'];
 
