@@ -43,7 +43,7 @@ $statuses = sql_select("STATUT", "*");
                     <input id="pseudoMemb" class="form-control" type="text" name="pseudoMemb" value="<?php echo($pseudoMemb) ?>">
                    
                     <label for="eMailMemb">Email</label>
-                    <input id="eMailMemb" class="form-control" type="text" name="eMailMemb" value="<?php echo($eMailMemb) ?>">
+                    <input id="eMailMemb" class="form-control" type="email" name="eMailMemb" value="<?php echo($eMailMemb) ?>">
                     
                     <label for="passMemb">Mot de passe</label>
                     <input id="passMemb" class="form-control" type="text" name="passMemb" value="<?php echo($passMemb) ?>">

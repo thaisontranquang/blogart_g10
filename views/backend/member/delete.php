@@ -35,7 +35,7 @@ $numStat = sql_select("MEMBRE","numStat", "numMemb = $numMemb")[0]['numStat'];
                     <label for="nomMemb">Nom</label>
                     <input id="nomMemb" class="form-control" type="text" name="nomMemb" value="<?php echo($nomMemb) ?>" readonly="readonly">
                     <label for="eMailMemb">Email</label>
-                    <input id="eMailMemb" class="form-control" type="text" name="eMailMemb" value="<?php echo($eMailMemb) ?>" readonly="readonly">
+                    <input id="eMailMemb" class="form-control" type="email" name="eMailMemb" value="<?php echo($eMailMemb) ?>" readonly="readonly">
                     <label for="passMemb">Prénom</label>
                     <input id="passMemb" class="form-control" type="text" name="passMemb" value="<?php echo($passMemb) ?>" readonly="readonly">
                     <input id="numMemb" class="form-control" type="text" name="numMemb" value="<?php echo($numMemb) ?>" hidden>
