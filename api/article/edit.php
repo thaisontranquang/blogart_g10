@@ -11,7 +11,7 @@ $libSsTitr2Art = sql_escape($_POST["libSsTitr2Art"]);
 $parag3Art = sql_escape($_POST["parag3Art"]);
 $libConclArt = sql_escape($_POST["libConclArt"]);
 $numThem = sql_escape($_POST["numThem"]);
-sql_update('ARTICLE', "libTitrArt = '$libTitrArt', libChapoArt = '$libChapoArt', parag1Art = '$parag1Art', libSsTitr1Art = '$libSsTitr1Art', parag2Art = '$parag2Art', libSsTitr2Art = '$libSsTitr2Art', parag3Art = '$parag3Art', libConclArt = '$libConclArt', urlPhotArt = '$urlPhotArt', numThem = $numThem", "numArt = $numArt");
+sql_update('ARTICLE', "libTitrArt = '$libTitrArt', libChapoArt = '$libChapoArt', parag1Art = '$parag1Art', libSsTitr1Art = '$libSsTitr1Art', parag2Art = '$parag2Art', libSsTitr2Art = '$libSsTitr2Art', parag3Art = '$parag3Art', libConclArt = '$libConclArt', urlPhotArt = '$urlPhotArt', numThem = '$numThem'", "numArt = $numArt");
 header('Location: ../../views/backend/article/list.php');
 
 ?>
