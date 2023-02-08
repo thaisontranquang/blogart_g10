@@ -54,7 +54,9 @@ $thematics = sql_select("THEMATIQUE", "*");
                     <input id="libConclArt" class="form-control" type="text" placeholder="Entrez votre conclusion" required name="libConclArt">
                 </div>
 
+                <label for="numThem">Sélectionner une thématique</label>
                 <select name="numThem" required>
+                    <option value="" disabled selected>- CHOIX DE LA THEMATIQUE -</option>
                     <?php foreach ($thematics as $thematic) { ?>
                         <option value="<?php echo $thematic['numThem']; ?>"><?php echo $thematic['libThem']; ?></option>
                     <?php } ?>
