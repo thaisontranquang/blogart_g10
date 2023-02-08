@@ -13,7 +13,10 @@
 
   <!-- Load CSS -->
   <link rel="stylesheet" href="/src/css/stylesheet.css">
-  <script src="/src/js/fontsize-feature.js" defer></script>
+
+  <script defer src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  <script defer src="/src/js/cta-cookie.js"></script>
 </head>
 
 <?php
@@ -22,6 +25,12 @@ require_once 'config.php';
 
 //load php scripts
 ?>
+
+<style>
+  <?php
+    echo (':root{ font-size:' . $_COOKIE['fontSize'] . 'px;}');
+  ?>
+</style>
 
 <body onload="ctaCookies()">
 
@@ -38,7 +47,7 @@ require_once 'config.php';
               Accueil
             </li>
           </a>
-          <a class="nav-link" aria-current="page" href="/">
+          <a class="nav-link" aria-current="page" href="/views/frontend/all_articles.php">
             <li class="nav-item">
               Nos articles
             </li>
@@ -59,7 +68,9 @@ require_once 'config.php';
   </nav>
 
   <section class="accessibility-features">
-    <button type="button" class="btn" onclick="increaseFontSize()">Agrandir la police ? <img src="/src/images/add_circle_FILL0_wght400_GRAD0_opsz48.svg" alt="Bouton agrandir le texte"></button>
+    <button type="button" class="btn" onclick="increaseSize()">Agrandir la police <img src="/src/images/trending_up_FILL0_wght400_GRAD0_opsz48.svg" alt="Bouton agrandir le texte"></button>
+    <button type="button" class="btn" onclick="decreaseSize()">Réduire la police <img src="/src/images/trending_down_FILL0_wght400_GRAD0_opsz48.svg" alt="Bouton réduire le texte"></button>
+    <button type="button" class="btn" onclick="resetSize()">Réinitialiser<img src="/src/images/restart_alt_FILL0_wght400_GRAD0_opsz48.svg" alt="Réinitialiser taille"></button>
   </section>
 
   <div class="backdrop-cookie">
