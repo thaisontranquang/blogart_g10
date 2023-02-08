@@ -38,7 +38,7 @@ $statuses = sql_select("STATUT", "*");
                 </div>
                 <div class="form-group">
                     <label for="eMailMemb">Email</label>
-                    <input id="eMailMemb" class="form-control" type="text" name="eMailMemb" placeholder="Entrez votre email" required>
+                    <input id="eMailMemb" class="form-control" type="email" name="eMailMemb" placeholder="Entrez votre email" required>
                 </div>
 
                 <div class="form-group mt-2">
