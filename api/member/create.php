@@ -2,11 +2,11 @@
 
 require_once $_SERVER['DOCUMENT_ROOT'] . '/config.php';
 
-$prenomMemb = $_POST['prenomMemb'];
-$nomMemb = $_POST['nomMemb'];
-$pseudoMemb = $_POST['pseudoMemb'];
-$passMemb = $_POST['passMemb'];
-$eMailMemb = $_POST['eMailMemb'];
+$prenomMemb = sql_escape($_POST['prenomMemb']);
+$nomMemb = sql_escape($_POST['nomMemb']);
+$pseudoMemb = sql_escape($_POST['pseudoMemb']);
+$passMemb = sql_escape($_POST['passMemb']);
+$eMailMemb = sql_escape($_POST['eMailMemb']);
 $numStat = $_POST['numStat'];
 
 sql_insert('MEMBRE', 'prenomMemb, nomMemb, pseudoMemb, passMemb, eMailMemb, numStat',"'$prenomMemb', '$nomMemb','$pseudoMemb', '$passMemb','$eMailMemb', 3");
