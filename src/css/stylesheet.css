@@ -424,28 +424,28 @@ footer > div p {
   background: #2D3C3B;
 }
 
-.show-article .content-article {
+.show-article .container > .row .content-article {
   margin-top: 20px;
   border-left: 2px solid #1A1818;
 }
-.show-article .content-article > span {
+.show-article .container > .row .content-article > span {
   color: #B54E3D;
   font-size: 1.5rem;
   display: inline-block;
   position: relative;
 }
-.show-article .content-article h1 {
+.show-article .container > .row .content-article h1 {
   font-style: normal;
   font-weight: 600;
   font-size: 2rem;
 }
-.show-article .content-article h6 {
+.show-article .container > .row .content-article h6 {
   color: #6C6666;
 }
-.show-article .content-article .libChapoArt {
+.show-article .container > .row .content-article .libChapoArt {
   font-weight: 500;
 }
-.show-article .content-article img {
+.show-article .container > .row .content-article img {
   aspect-ratio: 16/9;
   width: 100%;
   -o-object-fit: cover;
@@ -453,8 +453,41 @@ footer > div p {
   height: 40vh;
   margin-bottom: 20px;
 }
-.show-article .content-article h2 {
+.show-article .container > .row .content-article h2 {
   font-size: 1.3rem;
+}
+.show-article .container > .row .comment-section {
+  margin-top: 50px;
+}
+.show-article .container > .row .comment-section .btn {
+  background: #387178;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #F2F2F2;
+  margin: 20px;
+  transition: 0.1s ease-in-out;
+}
+.show-article .container > .row .comment-section .btn:hover {
+  background: #2D3C3B;
+}
+.show-article .container > .row .comment-section .comment {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.show-article .container > .row .comment-section .comment span .pseudomemb {
+  font-style: italic;
+  color: #B54E3D;
+  margin: 20px 0 5px 0;
+  display: inline-block;
+}
+.show-article .container > .row .comment-section .comment .comment-body {
+  background-color: #D0D0D0;
+  height: auto;
+  padding: 20px;
+  border-radius: 30px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
 }
 
 @media (max-width: 992px) {
