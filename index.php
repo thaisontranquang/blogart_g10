@@ -1,4 +1,6 @@
-<?php require_once 'header.php';
+<?php 
+require_once 'header.php';
+
 sql_connect();
 
 $articles = sql_select("ARTICLE", "*", "", "numArt DESC", 2);
