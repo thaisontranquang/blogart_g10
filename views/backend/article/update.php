@@ -18,13 +18,15 @@ $parag3Art = sql_select("ARTICLE", "parag3Art", "numArt = $numArt")[0]['parag3Ar
 $libConclArt = sql_select("ARTICLE", "libConclArt", "numArt = $numArt")[0]['libConclArt'];
 $urlPhotArt = sql_select("ARTICLE", "urlPhotArt", "numArt = $numArt")[0]['urlPhotArt'];
 
+//Load all thematics
+$thematics = sql_select("THEMATIQUE", "*");
 ?>
 
 <!--Bootstrap form to create a new article-->
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <h1>Delete article</h1>
+            <h1>Supprimer l'article</h1>
         </div>
         <div class="col-md-12">
             <!--Form to create a new article-->
@@ -64,13 +66,17 @@ $urlPhotArt = sql_select("ARTICLE", "urlPhotArt", "numArt = $numArt")[0]['urlPho
                     <label for="libConclArt">Conclusion</label>
                     <input id="libConclArt" class="form-control" type="text" placeholder="Entrez votre conclusion" required name="libConclArt" value="<?php echo($libConclArt) ?>">
                 </div>
-                <div class="form-group">
-                    <label for="urlPhotArt">Choisir une image pour votre article</label>
-                    <input id="urlPhotArt" class="form-control" type="file" accept="image/png, image/jpeg" required name="urlPhotArt" value="<?php echo($urlPhotArt) ?>">
-                </div>
+
+                <label for="numThem">Sélectionner une thématique</label>
+                <select name="numThem" required>
+                    <option value="" disabled selected>- CHOIX DE LA THEMATIQUE -</option>
+                    <?php foreach ($thematics as $thematic) { ?>
+                        <option value="<?php echo $thematic['numThem']; ?>"><?php echo $thematic['libThem']; ?></option>
+                    <?php } ?>
+                </select>
 
                 <div class="form-group mt-2">
-                    <button type="submit" class="btn btn-danger">Confirm edit ?</button>
+                    <button type="submit" class="btn btn-danger">Confirmer l'édition ?</button>
                 </div>
             </form>
         </div>

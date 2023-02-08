@@ -27,7 +27,7 @@ include '../../../header.php';
                 </div> 
                 <div class="form-group">
                     <label for="numArt">N° de l'article</label>
-                    <input id="numArt" class="form-control" type="number" placeholder="Saisissez le numéro de l'article" name="numArt" required>
+                    <input id="numArt" class="form-control" type="number" min="0" max="3" placeholder="Saisissez le numéro de l'article" name="numArt" required>
                 </div> 
                 <div class="form-group mt-2">
                     <button type="submit" class="btn btn-primary">Créer commentaire</button>

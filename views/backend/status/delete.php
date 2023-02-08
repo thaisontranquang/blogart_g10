@@ -16,7 +16,7 @@ $libStat = sql_select("STATUT", "libStat", "numStat = $numStat")[0]['libStat'];
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <h1>Delete Status</h1>
+            <h1>Supprimer statut</h1>
         </div>
         <div class="col-md-12">
             <!--Form to delete a member-->
@@ -27,7 +27,7 @@ $libStat = sql_select("STATUT", "libStat", "numStat = $numStat")[0]['libStat'];
                     <input id="libStat" class="form-control" type="text" name="libStat" value="<?php echo($libStat) ?>" readonly="readonly">
                 </div>
                 <div class="form-group mt-2">
-                    <button type="submit" class="btn btn-danger">Confirm deletion ?</button>
+                    <button type="submit" class="btn btn-danger">Confirmer la suppression ?</button>
                 </div>
             </form>
         </div>

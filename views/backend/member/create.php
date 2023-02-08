@@ -41,14 +41,8 @@ $statuses = sql_select("STATUT", "*");
                     <input id="eMailMemb" class="form-control" type="text" name="eMailMemb" placeholder="Entrez votre email" required>
                 </div>
 
-                <select name="numStat" required>
-                    <?php foreach ($statuses as $status) { ?>
-                        <option value="<?php echo $thematic['numStat']; ?>"><?php echo $thematic['libStat']; ?></option>
-                    <?php } ?>
-                </select>
-
                 <div class="form-group mt-2">
-                    <button type="submit" class="btn btn-primary">Create member</button>
+                    <button type="submit" class="btn btn-primary">Créer un membre</button>
                 </div>
             </form>
         </div>

@@ -16,6 +16,8 @@ $eMailMemb = sql_select("MEMBRE","eMailMemb", "numMemb = $numMemb")[0]['eMailMem
 $passMemb = sql_select("MEMBRE","passMemb", "numMemb = $numMemb")[0]['passMemb'];
 $numStat = sql_select("MEMBRE","numStat", "numMemb = $numMemb")[0]['numStat'];
 
+//Load all thematics
+$statuses = sql_select("STATUT", "*");
 ?>
 
 <!--Bootstrap form to delete a member-->
@@ -46,29 +48,18 @@ $numStat = sql_select("MEMBRE","numStat", "numMemb = $numMemb")[0]['numStat'];
                     <label for="passMemb">Mot de passe</label>
                     <input id="passMemb" class="form-control" type="text" name="passMemb" value="<?php echo($passMemb) ?>">
 
-                    <fieldset>
-                        <legend>Sélectionner un statut</legend>
-
-                            <div>
-                                <input type="radio" id="numStat" name="numStat" value="1">
-                                <label for="Admin">Administrateur</label>
-                            </div>
-
-                            <div>
-                                <input type="radio" id="numStat" name="numStat" value="2">
-                                <label for="Modérateur">Modérateur</label>
-                            </div>
-
-                            <div>
-                                <input type="radio" id="numStat" name="numStat" value="3">
-                                <label for="Membre">Membre</label>
-                            </div>
-                    </fieldset>
+                    <label for="numStat">Statut de l'utilisateur</label>
+                    <select name="numStat" required>
+                        <option value="" disabled selected>- CHOIX DU STATUT -</option>
+                        <?php foreach ($statuses as $status) { ?>
+                            <option value="<?php echo $status['numStat']; ?>"><?php echo $status['libStat']; ?></option>
+                        <?php } ?>
+                    </select>
 
                 </div>
                 
                 <div class="form-group mt-2">
-                    <button type="submit" class="btn btn-danger">Confirm editing ?</button>
+                    <button type="submit" class="btn btn-danger">Confirmer l'édition ?</button>
                 </div>
             </form>
         </div>

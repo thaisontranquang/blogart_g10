@@ -6,29 +6,32 @@ include '../../../header.php';
     header('Location: /'); //Redirect to home
     exit();
 } */
+$numCom = sql_escape($_GET['numCom']);
 
-/* $numMemb = $_GET['numMemb'];
+$libCom = sql_select("COMMENT","libCom", "numCom = $numCom")[0]['libCom'];
+$numArt = sql_select("COMMENT","numArt", "numCom = $numCom")[0]['numArt'];
+$numMemb = sql_select("COMMENT","numMemb", "numCom = $numCom")[0]['numMemb'];
+$attModOK =sql_select("COMMENT","attModOK", "numCom = $numCom")[0]['attModOK'];
+$notifComKOAff = sql_select("COMMENT","notifComKOAff", "numCom = $numCom")[0]['notifComKOAff'];
+$dtModCom = sql_select("COMMENT","dtModCom", "numCom = $numCom")[0]['dtModCom'];
 
-$pseudoMemb = sql_select("MEMBRE","pseudoMemb", "numMemb = $numMemb")[0]['pseudoMemb'];
-$prenomMemb = sql_select("MEMBRE","prenomMemb", "numMemb = $numMemb")[0]['prenomMemb'];
-$nomMemb = sql_select("MEMBRE","nomMemb", "numMemb = $numMemb")[0]['nomMemb'];
-$eMailMemb = sql_select("MEMBRE","eMailMemb", "numMemb = $numMemb")[0]['eMailMemb'];
-$passMemb = sql_select("MEMBRE","passMemb", "numMemb = $numMemb")[0]['passMemb'];
-$numStat = sql_select("MEMBRE","numStat", "numMemb = $numMemb")[0]['numStat']; */
 
 ?>
 
 <!--Bootstrap form to edit a commentary-->
     <div class="row">
         <div class="col-md-12">
-            <h1>Créer un nouveau commentaire</h1>
+            <h1>Editer un commentaire</h1>
         </div>
         <div class="col-md-12">
             <!--Form to edit a commentary -->
-            <form action="<?php echo ROOT_URL . '/api/comment/create.php' ?>" method="post">
+            <form action="<?php echo ROOT_URL . '/api/comment/edit.php' ?>" method="post">
                 <div class="form-group">
-                    <label for="libCom">Ecrivez votre commentaire</label>
+                    <label for="libCom">Editez un commentaire</label>
                     <input id="libCom" class="form-control" type="text" placeholder="Ecrivez votre commentaire" name="libCom" required>
+                    <input id="numCom" class="form-control" style ="display : none" type="text" value = "<?php echo $numCom ?>" name="numCom">
+                    <input id="dtModCom" class="form-control" style ="display : none" type="datetime" value = "<?php echo $dtModCom ?>" name="dtModCom">
+
                 </div> 
 
                 <div class="form-group">
@@ -47,15 +50,16 @@ $numStat = sql_select("MEMBRE","numStat", "numMemb = $numMemb")[0]['numStat']; *
                 </div>
                 <div class="form-group">
                     <label for="notifComKOAff">Commentaire modérateur</label>
-                    <input id="notifComKOAff" class="form-control" type="text" name="notifComKOAff" placeholder="Entrez votre commentaire" required>
+                    <input id="notifComKOAff" class="form-control" type="text" name="notifComKOAff" placeholder="Entrez votre commentaire">
                 </div>
                 <div class="form-group">
                     <label for="numArt">Numéro de l'article</label>
-                    <input id="numArt" class="form-control" type="text" name="numArt" placeholder="Entrez le numéro d'article" required>
+                    <input id="numArt" class="form-control" type="number" name="numArt" placeholder="Entrez le numéro d'article" required>
+                </div>
                 </div>
                 <div class="form-group">
                     <label for="numMemb">Numéro du membre ayant écrit le commentaire</label>
-                    <input id="numMemb" class="form-control" type="text" name="numMemb" placeholder="Entrez le numéro de membre"  required>
+                    <input id="numMemb" class="form-control" type="number" name="numMemb" placeholder="Entrez le numéro de membre"  required>
                 </div>
 
                 <div class="container">

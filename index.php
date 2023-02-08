@@ -41,13 +41,20 @@ $articles = sql_select("ARTICLE", "*", "", "numArt DESC", 2);
                 <form action="" method="post">
                     <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">Adresse mail</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="votreadresse@mail.com">
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="votreadresse@mail.com" required>
                     </div>
                     <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label">Mot de passe</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Mot de passe">
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Mot de passe" required>
                     </div>
                     <button type="submit" class="btn">Connexion</button>
+                        <?php
+                            if(isset($_GET['erreur'])){
+                            $err = $_GET['erreur'];
+                            if($err==1 || $err==2)
+                            echo "<p style='color:red'>Utilisateur ou mot de passe incorrect</p>";
+                            }
+                        ?>
                 </form>
 
                 <h3>Pas encore de compte ?</h3>
