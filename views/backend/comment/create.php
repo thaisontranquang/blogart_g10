@@ -6,7 +6,11 @@ include '../../../header.php';
     header('Location: /'); //Redirect to home
     exit();
 } */
+
+$numMemb = $_GET['numMemb'];
 ?>
+
+
 
 <!--Bootstrap form to create a new member-->
 <div class="container">
@@ -41,11 +45,11 @@ include '../../../header.php';
                 </div>
                 <div class="form-group">
                     <label for="numArt">Numéro de l'article</label>
-                    <input id="numArt" class="form-control" type="password" name="numArt" required>
+                    <input id="numArt" class="form-control" type="password" name="numArt">
                 </div>
                 <div class="form-group">
                     <label for="numMemb">Numéro du membre ayant écrit le commentaire</label>
-                    <input id="numMemb" class="form-control" type="text" name="numMemb" placeholder="Entrez votre email" required>
+                    <input id="numMemb" class="form-control" type="text" name="numMemb" value="<?php echo($numMemb) ?>" readonly>
                 </div>
                 <div class="form-group mt-2">
                     <button type="submit" class="btn btn-primary">Créer commentaire</button>
