@@ -21,6 +21,7 @@
 
 <?php
 //load config
+
 require_once 'config.php';
 
 //load php scripts

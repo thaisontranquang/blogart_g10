@@ -4,14 +4,10 @@ sql_connect();
 $articles = sql_select("ARTICLE", "*");
 $themes = sql_select("THEMATIQUE", "*");
 $theme_choosen = $_GET['numThem'];
-
-/* SELECT * FROM `orders` INNER JOIN users ON orders.id_user = users.id; /*égalité entre orders.id_users et users.id*/
 ?>
 
 <section class="all_articles">
     <h1>Articles</h1>
-
-    
     <div>
     <h2>Catégories</h2>
     <form method="get">

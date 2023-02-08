@@ -15,12 +15,13 @@ $padding-responsive: 0 10px 0 10px;
 
 * {
     font-family: 'Poppins', sans-serif;
-    transition: 0.1s ease-in-out;
+    transition: 0s;
 }
 
 body {
     background: $ba-first-color;
     padding-bottom: 60px;
+    font-family: 'Poppins', sans-serif;
 }
 
 //*NAVBAR*// 
@@ -75,6 +76,7 @@ nav {
         margin: 3px;
         background-color: $ba-third-color;
         color: $ba-first-color;
+        transition: 0.1s ease-in-out;
 
         img {
             width: 30px;
@@ -294,6 +296,7 @@ footer {
                 right: 0;
                 margin: 20px;
                 margin-top: 16.25rem;
+                transition: 0.1s ease-in-out;
 
 
                 img {
@@ -392,16 +395,23 @@ footer {
         color: #1A1818;
     }
 
+
     >div {
         width: 100%;
         display: flex;
         flex-direction: column;
-        padding:$padding-desktop;
+        padding: $padding-desktop;
+
+        h2 {
+            color: $ba-seventh-color;
+            font-weight: 600;
+        }
 
         form {
             .btn {
                 background-color: $ba-eigth-color;
-                margin:5px;
+                margin: 5px;
+                transition: 0.1s ease-in-out;
 
                 a {
                     text-decoration: none;
@@ -427,7 +437,7 @@ footer {
 
     .container {
         margin-top: 10px;
-        padding:0;
+        padding: 0;
 
         .row {
             flex-direction: row;
@@ -470,6 +480,8 @@ footer {
                         right: 0;
                         margin: 15px;
                         margin-bottom: 25px;
+                        transition: 0.1s ease-in-out;
+
 
                         img {
                             filter: invert(100%) sepia(21%) saturate(13%) hue-rotate(188deg) brightness(113%) contrast(90%);
@@ -484,6 +496,50 @@ footer {
                 }
             }
         }
+    }
+}
+
+//*SHOW ONE ARTICLE*//
+
+.show-article {
+
+    .content-article {
+        margin-top: 20px;
+        border-left: 2px solid #1A1818;
+
+        >span {
+            color: $ba-seventh-color;
+            font-size: 1.5rem;
+            display: inline-block;
+            position: relative;
+        }
+
+        h1 {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 2rem;
+        }
+
+        h6 {
+            color: $ba-fifth-color;
+        }
+
+        .libChapoArt{
+            font-weight: 500;
+        }
+
+        img {
+            aspect-ratio: 16/9;
+            width: 100%;
+            object-fit: cover;
+            height: 40vh;
+            margin-bottom:20px;
+        }
+
+        h2{
+            font-size: 1.3rem;
+        }
+
     }
 }
 
