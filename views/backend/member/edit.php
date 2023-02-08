@@ -50,18 +50,18 @@ $numStat = sql_select("MEMBRE","numStat", "numMemb = $numMemb")[0]['numStat'];
                         <legend>Sélectionner un statut</legend>
 
                             <div>
-                            <input type="radio" id="numStat" name="numStat" value="1">
-                            <label for="Admin">Administrateur</label>
+                                <input type="radio" id="numStat" name="numStat" value="1">
+                                <label for="Admin">Administrateur</label>
                             </div>
 
                             <div>
-                            <input type="radio" id="numStat" name="numStat" value="2">
-                            <label for="Modérateur">Modérateur</label>
+                                <input type="radio" id="numStat" name="numStat" value="2">
+                                <label for="Modérateur">Modérateur</label>
                             </div>
 
                             <div>
-                            <input type="radio" id="numStat" name="numStat" value="3">
-                            <label for="Membre">Membre</label>
+                                <input type="radio" id="numStat" name="numStat" value="3">
+                                <label for="Membre">Membre</label>
                             </div>
                     </fieldset>
 
