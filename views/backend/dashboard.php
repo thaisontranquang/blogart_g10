@@ -27,6 +27,8 @@ include '../../header.php';
                             <td>
                                 <a href="/views/backend/status/list.php" class="btn btn-primary">Liste</a>
                                 <a href="/views/backend/status/create.php" class="btn btn-success">Créer un nouveau statut</a>
+                                </td>
+                            <td></td>
                             </td>
                         </tr>
                         <tr>
@@ -46,7 +48,7 @@ include '../../header.php';
                             <td></td>
                         </tr>
                         <tr>
-                            <td>Thematiques</td>
+                            <td>Thématiques</td>
                             <td>
                                 <a href="/views/backend/thematic/list.php" class="btn btn-primary">Liste</a>
                                 <a href="/views/backend/thematic/create.php" class="btn btn-success">Créer</a>
