@@ -17,7 +17,7 @@ $members = sql_select("MEMBRE", "*");
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <h1>Members</h1>
+            <h1>Membres</h1>
             <table class="table table-striped">
                 <thead>
                     <tr>
