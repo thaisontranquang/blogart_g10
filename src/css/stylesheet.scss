@@ -2,11 +2,12 @@
 
 $ba-first-color: #F2F2F2;
 $ba-second-color: #1A1818;
-$ba-third-color: #40858D;
+$ba-third-color: #387178;
 $ba-fourth-color: #D0D0D0;
 $ba-fifth-color: #6C6666;
 $ba-sixth-color: #2D3C3B;
 $ba-seventh-color: #B54E3D;
+$ba-eigth-color: #EADED5;
 $padding-desktop: 0 60px 0 60px;
 $padding-responsive: 0 10px 0 10px;
 
@@ -97,7 +98,7 @@ footer {
 
     >div {
         background: linear-gradient(104.31deg, $ba-third-color 57.43%, #2D3C3B 95.2%);
-        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
         border-radius: 30px;
         padding: 3%;
         margin: auto;
@@ -124,14 +125,13 @@ footer {
                     text-decoration: none;
                     font-size: 1rem;
                     color: $ba-first-color;
-
-                    li {
-                        margin: 5px;
-                    }
+                    padding: 10px;
+                    display: inline-block;
                 }
 
                 a:hover {
                     color: $ba-first-color;
+                    text-decoration: underline;
                 }
             }
         }
@@ -156,7 +156,7 @@ footer {
 
     .bartdeaux-header {
         background: linear-gradient(104.31deg, $ba-third-color 57.43%, #2D3C3B 95.2%);
-        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
         border-radius: 30px;
         padding: 10%;
         margin: auto;
@@ -244,6 +244,8 @@ footer {
 
         .row {
             flex-wrap: wrap-reverse;
+            justify-content: center;
+            align-items: center;
         }
     }
 
@@ -271,22 +273,6 @@ footer {
             aspect-ratio: 1;
         }
 
-        .btn {
-            background: $ba-third-color;
-            font-style: normal;
-            font-weight: 600;
-            font-size: 1rem;
-            color: $ba-first-color;
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            margin: 20px;
-        }
-
-        .btn:hover {
-            background: $ba-sixth-color;
-        }
-
         .card-body {
             margin-bottom: 40px;
 
@@ -297,74 +283,93 @@ footer {
                 color: $ba-fifth-color;
             }
 
-            img {
-                filter: invert(100%) sepia(21%) saturate(13%) hue-rotate(188deg) brightness(113%) contrast(90%);
-                height: 25px;
+            .btn {
+                background: $ba-third-color;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 1rem;
+                color: $ba-first-color;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                margin: 20px;
+                margin-top: 16.25rem;
+
+
+                img {
+                    filter: invert(100%) sepia(21%) saturate(13%) hue-rotate(188deg) brightness(113%) contrast(90%);
+                    height: 25px;
+                }
             }
+
+            .btn:hover {
+                background: $ba-sixth-color;
+            }
+
         }
     }
 
-    .col-md-auto {
-        margin-bottom: 20px;
-    }
-
-    .col.fast-login {
+    .fast-login {
         align-items: center;
         display: flex;
         flex-direction: column;
-        margin: 20px;
         margin-bottom: 50px;
 
-        a {
-            text-decoration: none;
-        }
-
-        button {
+        >div {
+            padding: 10px;
             box-sizing: border-box;
-            display: flex;
-            align-items: flex-start;
-            width: max-content;
-            border: 2px solid $ba-second-color;
-            border-radius: 10px;
-            padding: 5px 25px 5px 25px;
-            font-style: normal;
-            font-weight: 500;
-            font-size: 1rem;
-            text-transform: lowercase;
-            color: $ba-second-color;
-            transition: 0.1s ease-in-out;
-            margin: auto;
-        }
 
-        button:hover {
-            background-color: $ba-second-color;
-            color: $ba-first-color;
-        }
-
-        h3 {
-            font-weight: 500;
-            font-size: 1.5rem;
-            text-align: center;
-        }
-
-        h3:last-of-type {
-            color: $ba-seventh-color;
-        }
-
-        form {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            margin-bottom: 30px;
-
-            label {
-                color: $ba-fifth-color;
+            a {
+                text-decoration: none;
             }
 
-            input {
-                border: none;
-                box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+            button {
+                box-sizing: border-box;
+                display: flex;
+                align-items: flex-start;
+                width: max-content;
+                border: 2px solid $ba-second-color;
                 border-radius: 10px;
+                padding: 5px 25px 5px 25px;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 1rem;
+                text-transform: lowercase;
+                color: $ba-second-color;
+                transition: 0.1s ease-in-out;
+                margin: auto;
+            }
+
+            button:hover {
+                background-color: $ba-second-color;
+                color: $ba-first-color;
+            }
+
+            h3 {
+                font-weight: 500;
+                font-size: 1.5rem;
+                text-align: center;
+            }
+
+            h3:last-of-type {
+                color: $ba-seventh-color;
+            }
+
+            form {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 30px;
+
+                label {
+                    color: $ba-fifth-color;
+                }
+
+                input {
+                    border: none;
+                    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+                    border-radius: 10px;
+                }
             }
         }
     }
@@ -373,10 +378,111 @@ footer {
 //*ALL ARTICLES PAGE*//
 
 .all_articles {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30px;
+
+    h1 {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 2rem;
+        text-transform: uppercase;
+        color: #1A1818;
+    }
+
+    >div {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding:$padding-desktop;
+
+        form {
+            .btn {
+                background-color: $ba-eigth-color;
+                margin:5px;
+
+                a {
+                    text-decoration: none;
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 1rem;
+                    color: $ba-second-color
+                }
+            }
+
+            .btn:target,
+            .btn:focus,
+            .btn:hover {
+                background-color: $ba-seventh-color;
+
+                a {
+                    color: $ba-first-color;
+                }
+            }
+
+        }
+    }
+
     .container {
+        margin-top: 10px;
+        padding:0;
+
         .row {
             flex-direction: row;
-            
+
+            .col-xl-3,
+            .col-md-6,
+            .col-sm-12 {
+                .card {
+                    border: none;
+                    margin-top: 20px;
+                    border-radius: 30px;
+                    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+                    min-height: 600px;
+
+                    h6 {
+                        font-size: 1rem;
+                        font-style: normal;
+                        font-weight: 400;
+                        color: $ba-fifth-color;
+                    }
+
+                    img {
+                        aspect-ratio: 16/9;
+                        object-fit: cover;
+                        border-radius: 30px 30px 0 0;
+                    }
+
+                    p {
+                        margin-bottom: 5.25rem;
+                    }
+
+                    .btn {
+                        background: $ba-third-color;
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 1rem;
+                        color: $ba-first-color;
+                        position: absolute;
+                        bottom: 0;
+                        right: 0;
+                        margin: 15px;
+                        margin-bottom: 25px;
+
+                        img {
+                            filter: invert(100%) sepia(21%) saturate(13%) hue-rotate(188deg) brightness(113%) contrast(90%);
+                            height: 25px;
+                            aspect-ratio: 1/1;
+                        }
+                    }
+
+                    .btn:hover {
+                        background: $ba-sixth-color;
+                    }
+                }
+            }
         }
     }
 }
@@ -430,7 +536,8 @@ footer {
     footer,
     .header,
     .news-login,
-    .navbar-expand-lg {
+    .navbar-expand-lg,
+    .accessibility-features {
         padding: $padding-responsive;
     }
 

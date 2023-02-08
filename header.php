@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 
 <head>
   <meta charset="utf-8">
@@ -47,7 +47,7 @@ require_once 'config.php';
               Accueil
             </li>
           </a>
-          <a class="nav-link" aria-current="page" href="/views/frontend/all_articles.php">
+          <a class="nav-link" aria-current="page" href="/views/frontend/all_articles.php?numThem=all">
             <li class="nav-item">
               Nos articles
             </li>

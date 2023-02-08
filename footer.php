@@ -7,34 +7,19 @@
                 </div>
                 <div class="col">
                     <ul>
-                        <a href="">
-                            <li>Accueil</li>
-                        </a>
-                        <a href="">
-                            <li>Nos articles</li>
-                        </a>
-                        <a href="">
-                            <li>Se connecter</li>
-                        </a>
-                        <a href="">
-                            <li>S'inscrire</li>
-                        </a>
-                        <a href="">
-                            <li>Admin</li>
-                        </a>
+                        
+                     <li><a href="">Accueil</a></li>     
+                     <li><a href="">Nos articles</a></li>   
+                     <li><a href="">Se connecter</a></li>   
+                     <li><a href="">S'inscrire</a></li>   
+                     <li><a href="">Admin</a></li>                      
                     </ul>
                 </div>
                 <div class="col">
                     <ul>
-                        <a href="">
-                            <li>Mentions légales</li>
-                        </a>
-                        <a href="">
-                            <li>CGU</li>
-                        </a>
-                        <a href="">
-                            <li>Politique de confidentialité</li>
-                        </a>
+                    <li><a href="">Mentions légales</a></li>   
+                    <li><a href="">CGU</a></li>   
+                    <li><a href="">Politique de confidentialité</a></li>   
                     </ul>
                 </div>
             </div>
