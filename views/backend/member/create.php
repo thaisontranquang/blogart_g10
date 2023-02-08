@@ -12,7 +12,7 @@ include '../../../header.php';
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <h1>Create new member</h1>
+            <h1>Créer un nouveau membre</h1>
         </div>
         <div class="col-md-12">
             <!--Form to create a new member-->

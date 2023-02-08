@@ -21,7 +21,7 @@ $numStat = sql_select("MEMBRE","numStat", "numMemb = $numMemb")[0]['numStat'];
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <h1>Delete Member</h1>
+            <h1>Supprimer ce membre</h1>
         </div>
         <div class="col-md-12">
             <!--Form to delete a member-->
