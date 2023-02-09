@@ -2,7 +2,7 @@
 include '../../header.php';
 ?>
 
-<form action="<?php echo ROOT_URL . '/api/register/register.php' ?>" method="post">
+<form action="<?php echo ROOT_URL . '/api/login_register/register.php' ?>" method="post">
     <div class="form-group">
         <label for="eMailMemb">Email</label>
         <input id="eMailMemb" class="form-control" type="text" name="eMailMemb" placeholder="Entrez votre email" required>
