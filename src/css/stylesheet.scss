@@ -503,43 +503,87 @@ footer {
 
 .show-article {
 
-    .content-article {
-        margin-top: 20px;
-        border-left: 2px solid #1A1818;
+    .container {
 
-        >span {
-            color: $ba-seventh-color;
-            font-size: 1.5rem;
-            display: inline-block;
-            position: relative;
+        >.row {
+            .content-article {
+                margin-top: 20px;
+                border-left: 2px solid #1A1818;
+
+                >span {
+                    color: $ba-seventh-color;
+                    font-size: 1.5rem;
+                    display: inline-block;
+                    position: relative;
+                }
+
+                h1 {
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 2rem;
+                }
+
+                h6 {
+                    color: $ba-fifth-color;
+                }
+
+                .libChapoArt {
+                    font-weight: 500;
+                }
+
+                img {
+                    aspect-ratio: 16/9;
+                    width: 100%;
+                    object-fit: cover;
+                    height: 40vh;
+                    margin-bottom: 20px;
+                }
+
+                h2 {
+                    font-size: 1.3rem;
+                }
+            }
+
+            .comment-section{
+                margin-top:50px;
+
+                .btn {
+                    background: $ba-third-color;
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 1rem;
+                    color: $ba-first-color;
+                    margin: 20px;
+                    transition: 0.1s ease-in-out;
+                }
+    
+                .btn:hover {
+                    background: $ba-sixth-color;
+                }
+                .comment {
+                    display:flex;
+                    flex-direction: column;
+                    width:100%;
+                    
+                    span{
+                        .pseudomemb{
+                            font-style:italic;
+                            color:$ba-seventh-color;
+                            margin:20px 0 5px 0;
+                            display:inline-block;
+                        }
+                    }
+
+                    .comment-body{
+                        background-color: $ba-fourth-color;
+                        height:auto;
+                        padding:20px;
+                        border-radius:30px;
+                        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+                    }
+                }
+            }
         }
-
-        h1 {
-            font-style: normal;
-            font-weight: 600;
-            font-size: 2rem;
-        }
-
-        h6 {
-            color: $ba-fifth-color;
-        }
-
-        .libChapoArt{
-            font-weight: 500;
-        }
-
-        img {
-            aspect-ratio: 16/9;
-            width: 100%;
-            object-fit: cover;
-            height: 40vh;
-            margin-bottom:20px;
-        }
-
-        h2{
-            font-size: 1.3rem;
-        }
-
     }
 }
 
