@@ -48,7 +48,7 @@ $articles = sql_select("ARTICLE", "*");
                             echo('<a href="create.php" class="btn btn-success">Créer</a>');}?>
         </div>
     </div>
-
+    </div>
 <?php
 include '../../../footer.php';
 ?>

@@ -55,6 +55,6 @@ $comments = sql_select("COMMENT", "*");
                             echo('<a href="create.php" class="btn btn-success">Create</a>');}?>
         </div>
     </div>
-
+    </div>
 <?php
 include '../../../footer.php'; // contains the footer

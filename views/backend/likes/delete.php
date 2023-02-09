@@ -38,7 +38,7 @@ $numMemb = sql_select("LIKEART", "numMemb", "numMemb = $numMemb")[0]['numMemb'];
         </div>
     </div>
 </div>
-
+</div>
 <?php
 include '../../../footer.php';
 ?>

@@ -33,7 +33,7 @@ $libStat = sql_select("STATUT", "libStat", "numStat = $numStat")[0]['libStat'];
         </div>
     </div>
 </div>
-
+</div>
 <?php
 include '../../../footer.php';
 ?>

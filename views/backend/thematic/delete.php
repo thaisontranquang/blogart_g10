@@ -34,7 +34,7 @@ $libThem = sql_select("THEMATIQUE", "libThem", "numThem = $numThem")[0]['libThem
     </div>
 </div>
 
-
+</div>
 <?php
 include '../../../footer.php';
 ?> 

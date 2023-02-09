@@ -41,6 +41,6 @@ $likes = sql_select("LIKEART", "*");
             <a href="create.php" class="btn btn-success">Créer</a>
         </div>
     </div>
-
+    </div>
 <?php
 include '../../../footer.php'; // contains the footer

@@ -82,7 +82,7 @@ $thematics = sql_select("THEMATIQUE", "*");
         </div>
     </div>
 </div>
-
+</div>
 
 
 <?php

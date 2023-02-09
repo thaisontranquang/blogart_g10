@@ -85,9 +85,7 @@ $keywords = sql_select("MOTCLE", "*");
         </div>
     </div>
 </div>
-
-
-
+                </div>
 <?php
 include '../../../footer.php';
 ?> 

@@ -33,7 +33,7 @@ $libTitrArt = sql_select("ARTICLE", "libTitrArt", "numArt = $numArt")[0]['libTit
         </div>
     </div>
 </div>
-
+</div>
 
 <?php
 include '../../../footer.php';

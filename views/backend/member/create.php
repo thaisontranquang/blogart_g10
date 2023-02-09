@@ -48,7 +48,7 @@ $statuses = sql_select("STATUT", "*");
         </div>
     </div>
 </div>
-
+</div>
 <?php
 include '../../../footer.php';
 ?> 

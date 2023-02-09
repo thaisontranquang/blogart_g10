@@ -19,7 +19,6 @@ if (!check_access(2)) {
                 <p>Bienvenue sur le panneau administratif</p>
             </div>
             <div class="col-md-12">
-
                 <table class="table table-striped">
                     <thead>
                         <tr>
@@ -111,8 +110,3 @@ if (!check_access(2)) {
     </div>
 
 </div>
-
-
-<?php
-include '../../../footer.php';
-?> // contains the footer
