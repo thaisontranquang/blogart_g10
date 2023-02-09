@@ -50,4 +50,4 @@ $numStat = sql_select("MEMBRE","numStat", "numMemb = $numMemb")[0]['numStat'];
 
 <?php
 include '../../../footer.php';
-?> // contains the footer
+?> 

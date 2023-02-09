@@ -41,4 +41,4 @@ $numMemb = sql_select("LIKEART", "numMemb", "numMemb = $numMemb")[0]['numMemb'];
 
 <?php
 include '../../../footer.php';
-?> // contains the footer
+?>

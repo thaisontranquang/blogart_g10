@@ -37,4 +37,4 @@ $libThem = sql_select("THEMATIQUE", "libThem", "numThem = $numThem")[0]['libThem
 
 <?php
 include '../../../footer.php';
-?> // contains the footer
+?> 

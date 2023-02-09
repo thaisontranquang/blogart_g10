@@ -33,4 +33,4 @@ include '../../../header.php';
 
 <?php
 include '../../../footer.php';
-?> // contains the footer
+?>
