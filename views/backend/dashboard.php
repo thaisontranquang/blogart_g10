@@ -76,10 +76,8 @@ include '../../header.php';
                         <tr>
                             <td>Mots-clés</td>
                             <td>
-                                <a href="/views/backend/keywords/list.php" class="btn btn-primary disabled">Liste</a>
-                                <a href="/views/backend/keywords/create.php" class="btn btn-success disabled">Créer</a>
-                                <a href="/views/backend/keywords/edit.php" class="btn btn-warning disabled">Edit</a>
-                                <a href="/views/backend/keywords/delete.php" class="btn btn-danger disabled">Delete</a>
+                                <a href="/views/backend/keyword/list.php" class="btn btn-primary">Liste</a>
+                                <a href="/views/backend/keyword/create.php" class="btn btn-success">Créer</a>
                             </td>
                             <td></td>
                         </tr>
