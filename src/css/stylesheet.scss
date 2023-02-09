@@ -550,6 +550,9 @@ footer {
     .container {
 
         >.row {
+            h3{
+                margin-top:20px;
+            }
             .content-article {
                 margin-top: 20px;
                 border-left: 2px solid #1A1818;
@@ -586,6 +589,31 @@ footer {
                 h2 {
                     font-size: 1.3rem;
                 }
+            }
+
+            .like-section{
+                display:flex;
+                justify-content: center;
+                .btn{
+                    background:$ba-seventh-color;
+                    color:$ba-first-color;
+                    display:flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    margin-top:75px;
+
+                    img{
+                        filter: invert(100%) sepia(59%) saturate(511%) hue-rotate(190deg) brightness(116%) contrast(90%);
+                    }
+                }
+                .btn:hover{
+                    background:$ba-eigth-color;
+                    color:$ba-second-color;
+                    img{
+                        filter: invert(6%) sepia(6%) saturate(634%) hue-rotate(314deg) brightness(101%) contrast(92%);
+                    }
+                }    
             }
 
             .comment-section {

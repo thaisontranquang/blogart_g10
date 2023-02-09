@@ -461,6 +461,9 @@ footer > div p {
   background: #2D3C3B;
 }
 
+.show-article .container > .row h3 {
+  margin-top: 20px;
+}
 .show-article .container > .row .content-article {
   margin-top: 20px;
   border-left: 2px solid #1A1818;
@@ -492,6 +495,29 @@ footer > div p {
 }
 .show-article .container > .row .content-article h2 {
   font-size: 1.3rem;
+}
+.show-article .container > .row .like-section {
+  display: flex;
+  justify-content: center;
+}
+.show-article .container > .row .like-section .btn {
+  background: #B54E3D;
+  color: #F2F2F2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 75px;
+}
+.show-article .container > .row .like-section .btn img {
+  filter: invert(100%) sepia(59%) saturate(511%) hue-rotate(190deg) brightness(116%) contrast(90%);
+}
+.show-article .container > .row .like-section .btn:hover {
+  background: #EADED5;
+  color: #1A1818;
+}
+.show-article .container > .row .like-section .btn:hover img {
+  filter: invert(6%) sepia(6%) saturate(634%) hue-rotate(314deg) brightness(101%) contrast(92%);
 }
 .show-article .container > .row .comment-section {
   margin-top: 50px;
