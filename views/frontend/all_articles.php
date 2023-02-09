@@ -38,12 +38,12 @@ $theme_choosen = $_GET['numThem'];
                 echo ('
         <div class="col-xl-3 col-md-6 col-sm-12">
             <div class="card">
-                <img src="/src/images/index.jpeg" class="card-img-top" alt="Image dernière actualité">
+                <img src="' . ROOT_URL . $article['urlPhotArt'] . '" class="card-img-top" alt="Image dernière actualité">
                 <div class="card-body">
                 <h5 class="card-title">' . $article['libTitrArt'] . '</h5>
                 <h6>le ' . $article['dtCreArt'] . '</h6>
                     <p class="card-text">' . substr($article['libChapoArt'], 0, 300) . ' ...' . '</p>
-                    <a href="article.php?numArt=' . $article['numArt'] . '" class="btn">Lire l\'article <img src="/src/images/chevron_right_FILL0_wght400_GRAD0_opsz48.svg" alt="Lire l\'article ?"></a>
+                    <a href="article.php?numArt=' . $article['numArt'] . '" class="btn">En voir plus<img src="/src/images/chevron_right_FILL0_wght400_GRAD0_opsz48.svg" alt="Lire l\'article ?"></a>
                 </div>
             </div>
         </div>

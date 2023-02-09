@@ -11,7 +11,8 @@ $latestArticles = sql_select("ARTICLE", "*", "", "numArt DESC", 10);
 <section class="header">
     <div class="bartdeaux-header">
         <h1>B’Art Deaux</h1>
-        <p>Lorem ipsum dolor sit amet consectetur. Non dolor nisi id urna turpis neque. Ac enim fringilla nulla amet in lacinia est quam magna. Nulla diam ultrices at sed. Molestie mauris praesent eu accumsan est faucibus nulla massa.</p>
+        <p>B’Art Deaux, c’est toute l’actualité bordelaise dans les musées. Grâce à B’Art Deaux, vous serez informé·e·s des événements à venir, des nouvelles expositions, mais vous aurez aussi l’occasion de découvrir des rencontres privilégiées avec des acteurs clés des musées bordelais ! 
+</p>
     </div>
 </section>
 
@@ -28,8 +29,8 @@ $latestArticles = sql_select("ARTICLE", "*", "", "numArt DESC", 10);
                     <div class="card-body">
                         <h5 class="card-title">' . $article['libTitrArt'] . '</h5>
                         <h6>le ' . $article['dtCreArt'] . '</h6>
-                        <p class="card-text">' . substr($article['libChapoArt'], 0, 200) . ' ...' . '</p>
-                        <a href="/views/frontend/article.php?numArt=' . $article['numArt'] . '" class="btn">Lire l\'article <img src="/src/images/chevron_right_FILL0_wght400_GRAD0_opsz48.svg" alt="Lire l\'article ?"></a>
+                        <p class="card-text">' . substr($article['libChapoArt'], 0, 500) . ' ...' . '</p>
+                        <a href="/views/frontend/article.php?numArt=' . $article['numArt'] . '" class="btn">En voir plus<img src="/src/images/chevron_right_FILL0_wght400_GRAD0_opsz48.svg" alt="Lire l\'article ?"></a>
                     </div>
                 </div>
                 ');
