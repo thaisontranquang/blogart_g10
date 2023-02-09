@@ -5,9 +5,10 @@ $numArt = $_GET['numArt'];
 $articles = sql_select("ARTICLE", "*", "numArt = $numArt");
 $libThem = sql_select('ARTICLE INNER JOIN THEMATIQUE ON ARTICLE.numThem = THEMATIQUE.numThem', 'libThem', "ARTICLE.numArt=$numArt")[0]['libThem'];
 $comments = sql_select('ARTICLE INNER JOIN COMMENT ON ARTICLE.numArt = COMMENT.numArt', '*', "ARTICLE.numArt=$numArt");
-$likes = sql_select('ARTICLE INNER JOIN LIKEART ON ARTICLE.numArt = LIKEART.numArt', 'likeA', "ARTICLE.numArt=$numArt");
+$likes = sql_select('ARTICLE INNER JOIN LIKEART ON ARTICLE.numArt = LIKEART.numArt', 'likeA', "ARTICLE.numArt=$numArt AND likeA = 1");
 $keywords = sql_select('MOTCLEARTICLE INNER JOIN MOTCLE ON MOTCLEARTICLE.numMotCle = MOTCLE.numMotCle', 'libMotCle', "MOTCLEARTICLE.numArt=$numArt");
 
+print_r($likeUser);
 ?>
 
 <section class="show-article">
@@ -15,9 +16,9 @@ $keywords = sql_select('MOTCLEARTICLE INNER JOIN MOTCLE ON MOTCLEARTICLE.numMotC
         <div class="row">
             <div class="col-xl-3">
                 <h3>Mots-clés</h3>
-            <p><?php foreach($keywords as $keyword){
-    echo($keyword['libMotCle'] . '<br>');
-}?></p>
+                <p><?php foreach ($keywords as $keyword) {
+                        echo ($keyword['libMotCle'] . '<br>');
+                    } ?></p>
             </div>
             <div class="col-xl-6 content-article">
                 <span> Thématique : <?php
@@ -53,21 +54,35 @@ $keywords = sql_select('MOTCLEARTICLE INNER JOIN MOTCLE ON MOTCLEARTICLE.numMotC
             </div>
         </div>
         <div class="row">
-            <div class="col-xl-3">
-            </div>
-            <div class="col-xl-6 comment-section">
-            <?php if (isset($_SESSION['numStat'])) {
-                ?> 
-                <form action="<?php echo ROOT_URL . '/api/comment/createCom.php' ?>" method="post">
+            <div class="col-xl-3 like-section">
+                <form action="<?php echo ROOT_URL . '/api/likes/createLike.php' ?>" method="post">
                     <div class="form-group">
-                        <label for="libCom">Ajouter un commentaire :</label>
-                        <textarea id="libCom" class="form-control" type="text" placeholder="Ecrivez votre commentaire" name="libCom" required></textarea>
+                        <input id="numMemb" class="form-control" type="number" value="1" name="numMemb" readonly="readonly" style="display:none;">
                         <input id="numMemb" class="form-control" type="number" value="<?php echo ($_SESSION['numMemb']); ?>" name="numMemb" readonly="readonly" style="display:none;">
                         <input id="numArt" class="form-control" type="number" min="0" max="3" value="<?php echo (intval($numArt)); ?>" name="numArt" readonly="readonly" style="display:none;">
-                        <button type="submit" class="btn">Envoyer</button>
+                        <button type="submit" class="btn">
+                            <img src="/src/images/thumb_up_FILL0_wght400_GRAD0_opsz48.svg">
+                            <?php
+                            echo (count($likes));
+                            ?> J'aime(s)
+                        </button>
                     </div>
                 </form>
-            <?php }?>
+
+            </div>
+            <div class="col-xl-6 comment-section">
+                <?php if (isset($_SESSION['numStat'])) {
+                ?>
+                    <form action="<?php echo ROOT_URL . '/api/comment/createCom.php' ?>" method="post">
+                        <div class="form-group">
+                            <label for="libCom">Ajouter un commentaire :</label>
+                            <textarea id="libCom" class="form-control" type="text" placeholder="Ecrivez votre commentaire" name="libCom" required></textarea>
+                            <input id="numMemb" class="form-control" type="number" value="<?php echo ($_SESSION['numMemb']); ?>" name="numMemb" readonly="readonly" style="display:none;">
+                            <input id="numArt" class="form-control" type="number" min="0" max="3" value="<?php echo (intval($numArt)); ?>" name="numArt" readonly="readonly" style="display:none;">
+                            <button type="submit" class="btn">Envoyer</button>
+                        </div>
+                    </form>
+                <?php } ?>
 
                 <?php foreach ($comments as $comment) {
                     $member = sql_select('MEMBRE', 'pseudoMemb', "numMemb = " . $comment['numMemb'])[0]['pseudoMemb'];
