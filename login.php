@@ -31,9 +31,9 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/config.php';
             <div class="col-md-4">
                 <form action="<?php echo ROOT_URL . '/api/connexion/login.php' ?>" method="post">
                     <h2>Connexion</h2>
-                        <label class="text-champ">Adresse mail</label>
+                        <label class="text-champ">Adresse mail *</label>
                         <input id="eMailMemb" class="form-control" type="text" name="eMailMemb" required placeholder="jd36@gmail.com">
-                        <label class="text-champ">Mot de passe</label>
+                        <label class="text-champ">Mot de passe *</label>
                         <input id="passMemb" class="form-control" type="password" name="passMemb" required placeholder="Mot de passe">
                         <button type="submit">Se connecter</button>
                 </form>
