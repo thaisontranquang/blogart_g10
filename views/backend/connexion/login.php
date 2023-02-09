@@ -11,7 +11,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/config.php';
     <div class="row">
         <div class="col-md-6 ">
 
-            <form action="<?php echo ROOT_URL . '/api/connexion/register.php' ?>" method="post">
+            <form action="<?php echo ROOT_URL . '/api/register/register.php' ?>" method="post">
                 <label for="nomMemb">Nom * </label>
                 <input class="form-control" type="text" id="nameMemb" name='nameMemb' required>
                 <label for="prenomMemb">Prénom * </label>
@@ -23,8 +23,9 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/config.php';
                 <label for="passMemb">Mot de passe * </label>
                 <input class="form-control" type="password" id="passMemb" name='passMemb' required>
                 <button type="submit">Créer un compte</button>
-            </div>
+            </form>
         </div>
+    </div>
 
         <div class="row">
             <div class="col-md-6 ">
