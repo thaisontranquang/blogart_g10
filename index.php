@@ -4,6 +4,7 @@ require_once 'header.php';
 sql_connect();
 
 $articles = sql_select("ARTICLE", "*", "", "numArt DESC", 2);
+$latestArticles = sql_select("ARTICLE", "*", "", "numArt DESC", 10);
 
 ?>
 
@@ -55,6 +56,19 @@ $articles = sql_select("ARTICLE", "*", "", "numArt DESC", 2);
                 </div>
             </div>
             <?php
+            } else {
+                ?>
+            <div class="col-xl-3 col-md-8 col-sm-12 latest-articles">
+                <h2>Une petite lecture ?</h2>
+            <?php
+            foreach ($latestArticles as $lastestArticle) {
+                echo ('
+                <a href="/views/frontend/article.php?numArt=' . $article['numArt'] . '">' . $lastestArticle['libTitrArt'] . '</a>
+                ');
+            };
+                ?>
+            </div>
+                <?php
             }
             ?>
         </div>
