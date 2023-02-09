@@ -6,12 +6,7 @@ $articles = sql_select("ARTICLE", "*", "numArt = $numArt");
 $libThem = sql_select('ARTICLE INNER JOIN THEMATIQUE ON ARTICLE.numThem = THEMATIQUE.numThem', 'libThem', "ARTICLE.numArt=$numArt")[0]['libThem'];
 $comments = sql_select('ARTICLE INNER JOIN COMMENT ON ARTICLE.numArt = COMMENT.numArt', '*', "ARTICLE.numArt=$numArt");
 $likes = sql_select('ARTICLE INNER JOIN LIKEART ON ARTICLE.numArt = LIKEART.numArt', 'likeA', "ARTICLE.numArt=$numArt");
-
 $keywords = sql_select('MOTCLEARTICLE INNER JOIN MOTCLE ON MOTCLEARTICLE.numMotCle = MOTCLE.numMotCle', 'libMotCle', "MOTCLEARTICLE.numArt=$numArt");
-
-foreach($keywords as $keyword){
-    echo($keyword['libMotCle']);
-}
 
 ?>
 
@@ -19,7 +14,10 @@ foreach($keywords as $keyword){
     <div class="container">
         <div class="row">
             <div class="col-xl-3">
-                fdvsdgbqd
+                <h3>Mots-clés</h3>
+            <p><?php foreach($keywords as $keyword){
+    echo($keyword['libMotCle'] . '<br>');
+}?></p>
             </div>
             <div class="col-xl-6 content-article">
                 <span> Thématique : <?php
@@ -60,10 +58,11 @@ foreach($keywords as $keyword){
             <div class="col-xl-6 comment-section">
             <?php if (isset($_SESSION['numStat'])) {
                 ?> 
-                <form action="<?php echo ROOT_URL . '/api/comment/create.php' ?>" method="post">
+                <form action="<?php echo ROOT_URL . '/api/comment/createCom.php' ?>" method="post">
                     <div class="form-group">
                         <label for="libCom">Ajouter un commentaire :</label>
                         <textarea id="libCom" class="form-control" type="text" placeholder="Ecrivez votre commentaire" name="libCom" required></textarea>
+                        <input id="numMemb" class="form-control" type="number" value="<?php echo ($_SESSION['numMemb']); ?>" name="numMemb" readonly="readonly" style="display:none;">
                         <input id="numArt" class="form-control" type="number" min="0" max="3" value="<?php echo (intval($numArt)); ?>" name="numArt" readonly="readonly" style="display:none;">
                         <button type="submit" class="btn">Envoyer</button>
                     </div>
@@ -71,8 +70,7 @@ foreach($keywords as $keyword){
             <?php }?>
 
                 <?php foreach ($comments as $comment) {
-                    $numCom = $comment['numCom'];
-                    $member = sql_select('COMMENT INNER JOIN MEMBRE ON COMMENT.numMemb = MEMBRE.numMemb', 'pseudoMemb', "COMMENT.numArt=$numArt")[$numCom]['pseudoMemb'];
+                    $member = sql_select('MEMBRE', 'pseudoMemb', "numMemb = " . $comment['numMemb'])[0]['pseudoMemb'];
                     echo ('
                     <div class="comment">
                     <span>Par <span class="pseudomemb">' . $member . '</span> le ' . $comment['dtCreCom'] . '</span>
@@ -80,10 +78,6 @@ foreach($keywords as $keyword){
                         $comment['libCom']
                         . "</div></div>");
                 } ?>
-
-
-
-
             </div>
         </div>
     </div>
