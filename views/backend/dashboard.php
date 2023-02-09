@@ -1,6 +1,13 @@
 <?php
 include '../../header.php';
 
+//Security check
+//Level 1 mean administator in DB
+if (!check_access(2)) {
+    header('Location: /'); //Redirect to home
+    exit();
+} 
+
 ?>
 
 <!--Bootstrap admin dashboard template-->
@@ -18,10 +25,12 @@ include '../../header.php';
                         <tr>
                             <th>Page</th>
                             <th>Actions</th>
-                            <th>Commentaires</th>
                         </tr>
                     </thead>
                     <tbody>
+                    <?php 
+                        if (check_access(1)) {
+                            echo('
                         <tr>
                             <td>Statuts</td>
                             <td>
@@ -31,22 +40,31 @@ include '../../header.php';
                             <td></td>
                             </td>
                         </tr>
+                        ');} ?>
                         <tr>
                             <td>Membres</td>
                             <td>
                                 <a href="/views/backend/member/list.php" class="btn btn-primary">Liste</a>
-                                <a href="/views/backend/member/create.php" class="btn btn-success">Créer un nouveau membre</a>
+                                <?php 
+                        if (check_access(1)) {
+                            echo('<a href="/views/backend/member/create.php" class="btn btn-success">Créer un nouveau membre</a>');}?>
                             </td>
                         </tr>
                         <tr>
                             <td>Articles</td>
                             <td>
                                 <a href="/views/backend/article/list.php" class="btn btn-primary">Liste</a>
-                                <a href="/views/backend/article/create.php" class="btn btn-success">Créer</a>
+                                <?php 
+                        if (check_access(1)) {
+                            echo('<a href="/views/backend/article/create.php" class="btn btn-success">Créer</a>');
+                        }?>
 
                             </td>
                             <td></td>
                         </tr>
+                        <?php 
+                        if (check_access(1)) {
+                            echo('
                         <tr>
                             <td>Thématiques</td>
                             <td>
@@ -55,29 +73,35 @@ include '../../header.php';
                             </td>
                             <td></td>
                         </tr>
+                        ');
+                    } 
+                    ?>
                         <tr>
                             <td>Commentaires</td>
                             <td>
                                 <a href="/views/backend/comment/list.php" class="btn btn-primary">Liste</a>
-                                <a href="/views/backend/comment/create.php" class="btn btn-success">Créer</a>
+                                <?php 
+                        if (check_access(1)) {
+                            echo('
+                                <a href="/views/backend/comment/create.php" class="btn btn-success">Créer</a>');}?>
                             </td>
                             <td></td>
                         </tr>
+                    
+
                         <tr>
                             <td>Likes</td>
                             <td>
                                 <a href="/views/backend/likes/list.php" class="btn btn-primary">Liste</a>
                                 <a href="/views/backend/likes/create.php" class="btn btn-success">Créer</a>
                             </td>
-                            <td>Utilisation de Ajax si trop de temps ;)</td>
+                            <td></td>
                         </tr>
                         <tr>
                             <td>Mots-clés</td>
                             <td>
-                                <a href="/views/backend/keywords/list.php" class="btn btn-primary disabled">Liste</a>
-                                <a href="/views/backend/keywords/create.php" class="btn btn-success disabled">Créer</a>
-                                <a href="/views/backend/keywords/edit.php" class="btn btn-warning disabled">Edit</a>
-                                <a href="/views/backend/keywords/delete.php" class="btn btn-danger disabled">Delete</a>
+                                <a href="/views/backend/keyword/list.php" class="btn btn-primary">Liste</a>
+                                <a href="/views/backend/keyword/create.php" class="btn btn-success">Créer</a>
                             </td>
                             <td></td>
                         </tr>

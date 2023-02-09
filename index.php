@@ -28,39 +28,35 @@ $articles = sql_select("ARTICLE", "*", "", "numArt DESC", 2);
                         <h5 class="card-title">' . $article['libTitrArt'] . '</h5>
                         <h6>le ' . $article['dtCreArt'] . '</h6>
                         <p class="card-text">' . substr($article['libChapoArt'], 0, 500) . ' ...' . '</p>
-                        <a href="#" class="btn">Go somewhere <img src="/src/images/chevron_right_FILL0_wght400_GRAD0_opsz48.svg" alt="Lire l\'article ?"></a>
+                        <a href="/views/frontend/article.php?numArt=' . $article['numArt'] . '" class="btn">Go somewhere <img src="/src/images/chevron_right_FILL0_wght400_GRAD0_opsz48.svg" alt="Lire l\'article ?"></a>
                     </div>
                 </div>
                 ');
             };
                 ?>
             </div>
+            <?php if (!isset($_SESSION['numStat'])) {
+                ?> 
             <div class="col-xl-3 col-md-8 col-sm-12 fast-login">
                 <div>
                 <h3>Connectez-vous</h3>
-                <form action="" method="post">
-                    <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Adresse mail</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="votreadresse@mail.com" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Mot de passe</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Mot de passe" required>
+                <form action="<?php echo ROOT_URL . '/api/connexion/login.php' ?>" method="post">
+                <div class="form-group">
+                        <label class="text-champ">Adresse mail</label>
+                        <input id="eMailMemb" class="form-control" type="text" name="eMailMemb" required>
+                        <label class="text-champ">Mot de passe</label>
+                        <input id="passMemb" class="form-control" type="password" name="passMemb" required>
                     </div>
                     <button type="submit" class="btn">Connexion</button>
-                        <?php
-                            if(isset($_GET['erreur'])){
-                            $err = $_GET['erreur'];
-                            if($err==1 || $err==2)
-                            echo "<p style='color:red'>Utilisateur ou mot de passe incorrect</p>";
-                            }
-                        ?>
                 </form>
 
                 <h3>Pas encore de compte ?</h3>
-                <a href="#"><button type="submit" class="btn">S'inscrire</button></a>
+                <a href="login.php"><button type="submit" class="btn">S'inscrire</button></a>
                 </div>
             </div>
+            <?php
+            }
+            ?>
         </div>
 
     </div>

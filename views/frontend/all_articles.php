@@ -1,7 +1,7 @@
 <?php require_once '../../header.php';
 sql_connect();
 
-$articles = sql_select("ARTICLE", "*");
+$articles = sql_select("ARTICLE", "*", "", "numArt DESC");
 $themes = sql_select("THEMATIQUE", "*");
 $theme_choosen = $_GET['numThem'];
 ?>
@@ -29,9 +29,9 @@ $theme_choosen = $_GET['numThem'];
         <div class="row">
             <?php
             if ($theme_choosen != 'all' ){
-                $articles = sql_select('ARTICLE INNER JOIN THEMATIQUE ON ARTICLE.numThem = THEMATIQUE.numThem', '*', "ARTICLE.numThem='$theme_choosen'");
+                $articles = sql_select('ARTICLE INNER JOIN THEMATIQUE ON ARTICLE.numThem = THEMATIQUE.numThem', '*', "ARTICLE.numThem='$theme_choosen'", "numArt DESC");
             } else{
-                $articles = sql_select("ARTICLE", "*");
+                $articles = sql_select("ARTICLE", "*", "", "numArt DESC");
             };
 
             foreach ($articles as $article) {

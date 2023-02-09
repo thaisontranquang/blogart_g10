@@ -4,10 +4,10 @@ include '../../../header.php'; // contains the header and call to config.php
 
 //Security check
 //Level 1 mean administator in DB
-/* if (!check_access(1)) {
+if (!check_access(2)) {
     header('Location: /'); //Redirect to home
     exit();
-} */
+} 
 
 //Load all articles
 $articles = sql_select("ARTICLE", "*");
@@ -23,7 +23,9 @@ $articles = sql_select("ARTICLE", "*");
                     <tr>
                         <th>Identifiant</th>
                         <th>Nom</th>
-                        <th>Actions</th>
+                        <?php 
+                        if (check_access(1)) {
+                            echo('<th>Actions</th>');}?>
                     </tr>
                 </thead>
                 <tbody>
@@ -31,15 +33,19 @@ $articles = sql_select("ARTICLE", "*");
                         <tr>
                             <td><?php echo $article['numArt']; ?></td>
                             <td><?php echo $article['libTitrArt']; ?></td>
-                            <td>
-                                <a href="update.php?numArt=<?php echo $article['numArt']; ?>" class="btn btn-primary">Editer</a>
-                                <a href="delete.php?numArt=<?php echo $article['numArt']; ?>" class="btn btn-danger">Suppression</a>
+                            <?php 
+                        if (check_access(1)) {
+                            echo('<td>
+                                <a href="update.php?numArt=<?php echo $article[\'numArt\']; ?>" class="btn btn-primary">Editer</a>
+                                <a href="delete.php?numArt=<?php echo $article[\'numArt\']; ?>" class="btn btn-danger">Suppression</a>');}?>
                             </td>
                         </tr>
                     <?php } ?>
                 </tbody>
             </table>
-            <a href="create.php" class="btn btn-success">Créer</a>
+            <?php 
+                        if (check_access(1)) {
+                            echo('<a href="create.php" class="btn btn-success">Créer</a>');}?>
         </div>
     </div>
 
