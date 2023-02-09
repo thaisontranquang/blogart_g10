@@ -111,3 +111,8 @@ if (!check_access(2)) {
     </div>
 
 </div>
+
+
+<?php
+include '../../../footer.php';
+?> // contains the footer

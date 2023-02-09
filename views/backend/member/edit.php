@@ -65,3 +65,8 @@ $statuses = sql_select("STATUT", "*");
         </div>
     </div>
 </div>
+
+
+<?php
+include '../../../footer.php';
+?> // contains the footer

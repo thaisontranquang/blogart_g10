@@ -50,4 +50,5 @@ $articles = sql_select("ARTICLE", "*");
     </div>
 
 <?php
-include '../../../footer.php'; // contains the footer
+include '../../../footer.php';
+?> // contains the footer

@@ -29,3 +29,8 @@ include '../../../header.php';
         </div>
     </div>
 </div>
+
+
+<?php
+include '../../../footer.php';
+?> // contains the footer

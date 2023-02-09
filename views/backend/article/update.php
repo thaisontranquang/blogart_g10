@@ -26,7 +26,7 @@ $thematics = sql_select("THEMATIQUE", "*");
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <h1>Supprimer l'article</h1>
+            <h1>Modifier l'article</h1>
         </div>
         <div class="col-md-12">
             <!--Form to create a new article-->
@@ -82,3 +82,9 @@ $thematics = sql_select("THEMATIQUE", "*");
         </div>
     </div>
 </div>
+
+
+
+<?php
+include '../../../footer.php';
+?> // contains the footer
