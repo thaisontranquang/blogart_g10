@@ -87,4 +87,4 @@ $thematics = sql_select("THEMATIQUE", "*");
 
 <?php
 include '../../../footer.php';
-?> // contains the footer
+?>

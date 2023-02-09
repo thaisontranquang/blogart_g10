@@ -37,4 +37,4 @@ $libTitrArt = sql_select("ARTICLE", "libTitrArt", "numArt = $numArt")[0]['libTit
 
 <?php
 include '../../../footer.php';
-?> // contains the footer
+?> 

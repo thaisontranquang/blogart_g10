@@ -45,4 +45,4 @@ $articles = sql_select("ARTICLE", "*");
 
 <?php
 include '../../../footer.php';
-?> // contains the footer
+?> 

@@ -40,4 +40,4 @@ if (!check_access(1)) {
 
 <?php
 include '../../../footer.php';
-?> // contains the footer
+?>

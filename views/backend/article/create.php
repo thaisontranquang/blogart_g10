@@ -90,4 +90,4 @@ $keywords = sql_select("MOTCLE", "*");
 
 <?php
 include '../../../footer.php';
-?> // contains the footer
+?> 

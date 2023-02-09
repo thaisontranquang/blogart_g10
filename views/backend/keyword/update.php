@@ -37,4 +37,4 @@ $libMotCle = sql_select("MOTCLE", "libMotCle", "numMotCle = $numMotCle")[0]['lib
 
 <?php
 include '../../../footer.php';
-?> // contains the footer
+?> 

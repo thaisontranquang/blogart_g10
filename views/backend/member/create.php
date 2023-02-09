@@ -51,4 +51,4 @@ $statuses = sql_select("STATUT", "*");
 
 <?php
 include '../../../footer.php';
-?> // contains the footer
+?> 

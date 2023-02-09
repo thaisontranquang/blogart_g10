@@ -36,4 +36,4 @@ $libStat = sql_select("STATUT", "libStat", "numStat = $numStat")[0]['libStat'];
 
 <?php
 include '../../../footer.php';
-?> // contains the footer
+?> 
