@@ -183,7 +183,6 @@ footer {
 
         h1 {
             position: relative;
-            font-family: 'Subjectivity';
             font-style: normal;
             font-weight: 700;
             font-size: 4rem;
@@ -389,6 +388,10 @@ footer {
                     border: none;
                     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
                     border-radius: 10px;
+                }
+
+                .btn{
+                    margin-top:20px;
                 }
             }
         }
