@@ -43,7 +43,7 @@ $theme_choosen = $_GET['numThem'];
                 <h5 class="card-title">' . $article['libTitrArt'] . '</h5>
                 <h6>le ' . $article['dtCreArt'] . '</h6>
                     <p class="card-text">' . substr($article['libChapoArt'], 0, 300) . ' ...' . '</p>
-                    <a href="article.php?numArt=' . $article['numArt'] . '" class="btn">Go somewhere <img src="/src/images/chevron_right_FILL0_wght400_GRAD0_opsz48.svg" alt="Lire l\'article ?"></a>
+                    <a href="article.php?numArt=' . $article['numArt'] . '" class="btn">Lire l\'article <img src="/src/images/chevron_right_FILL0_wght400_GRAD0_opsz48.svg" alt="Lire l\'article ?"></a>
                 </div>
             </div>
         </div>

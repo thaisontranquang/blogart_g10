@@ -5,9 +5,12 @@ $numArt = $_GET['numArt'];
 $articles = sql_select("ARTICLE", "*", "numArt = $numArt");
 $libThem = sql_select('ARTICLE INNER JOIN THEMATIQUE ON ARTICLE.numThem = THEMATIQUE.numThem', 'libThem', "ARTICLE.numArt=$numArt")[0]['libThem'];
 $comments = sql_select('ARTICLE INNER JOIN COMMENT ON ARTICLE.numArt = COMMENT.numArt', '*', "ARTICLE.numArt=$numArt");
-$likes = sql_select('ARTICLE INNER JOIN LIKEART ON ARTICLE.numArt = LIKEART.numArt', 'likeA', "ARTICLE.numArt=$numArt");
+$likes = sql_select('ARTICLE INNER JOIN LIKEART ON ARTICLE.numArt = LIKEART.numArt', 'likeA', "ARTICLE.numArt=$numArt AND likeA = 1");
+$likeUser = sql_select('ARTICLE INNER JOIN LIKEART ON ARTICLE.numArt = LIKEART.numArt', 'likeA', "ARTICLE.numArt=$numArt AND likeA = 1 AND numMemb = " . $_SESSION['numMemb'] ."")[0];
 $keywords = sql_select('MOTCLEARTICLE INNER JOIN MOTCLE ON MOTCLEARTICLE.numMotCle = MOTCLE.numMotCle', 'libMotCle', "MOTCLEARTICLE.numArt=$numArt");
 
+/* SELECT numArt count(*) from LIKEART GROUP BY numArt;
+ */
 ?>
 
 <section class="show-article">
@@ -54,6 +57,18 @@ $keywords = sql_select('MOTCLEARTICLE INNER JOIN MOTCLE ON MOTCLEARTICLE.numMotC
         </div>
         <div class="row">
             <div class="col-xl-3">
+                aimer l'article ? 
+                <form action="<?php echo ROOT_URL . '/api/likes/createLike.php' ?>" method="post">
+                    <div class="form-group">
+                        <input id="numMemb" class="form-control" type="number" value="1" name="numMemb" readonly="readonly">
+                        <input id="numMemb" class="form-control" type="number" value="<?php echo ($_SESSION['numMemb']); ?>" name="numMemb" readonly="readonly" style="display:none;">
+                        <input id="numArt" class="form-control" type="number" min="0" max="3" value="<?php echo (intval($numArt)); ?>" name="numArt" readonly="readonly" style="display:none;">
+                        <button type="submit" class="btn">Envoyer</button>
+                    </div>
+                </form>
+                <?php
+                echo(count($likes));
+                ?>
             </div>
             <div class="col-xl-6 comment-section">
             <?php if (isset($_SESSION['numStat'])) {

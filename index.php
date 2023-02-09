@@ -28,8 +28,8 @@ $latestArticles = sql_select("ARTICLE", "*", "", "numArt DESC", 10);
                     <div class="card-body">
                         <h5 class="card-title">' . $article['libTitrArt'] . '</h5>
                         <h6>le ' . $article['dtCreArt'] . '</h6>
-                        <p class="card-text">' . substr($article['libChapoArt'], 0, 500) . ' ...' . '</p>
-                        <a href="/views/frontend/article.php?numArt=' . $article['numArt'] . '" class="btn">Go somewhere <img src="/src/images/chevron_right_FILL0_wght400_GRAD0_opsz48.svg" alt="Lire l\'article ?"></a>
+                        <p class="card-text">' . substr($article['libChapoArt'], 0, 200) . ' ...' . '</p>
+                        <a href="/views/frontend/article.php?numArt=' . $article['numArt'] . '" class="btn">Lire l\'article <img src="/src/images/chevron_right_FILL0_wght400_GRAD0_opsz48.svg" alt="Lire l\'article ?"></a>
                     </div>
                 </div>
                 ');
