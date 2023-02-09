@@ -92,10 +92,8 @@ if (!check_access(2)) {
                         <tr>
                             <td>Likes</td>
                             <td>
-                                <a href="/views/backend/likes/list.php" class="btn btn-primary disabled">Liste</a>
-                                <a href="/views/backend/likes/create.php" class="btn btn-success disabled">Créer</a>
-                                <a href="/views/backend/likes/edit.php" class="btn btn-warning disabled">Edit</a>
-                                <a href="/views/backend/likes/delete.php" class="btn btn-danger disabled">Delete</a>
+                                <a href="/views/backend/likes/list.php" class="btn btn-primary">Liste</a>
+                                <a href="/views/backend/likes/create.php" class="btn btn-success">Créer</a>
                             </td>
                             <td></td>
                         </tr>
