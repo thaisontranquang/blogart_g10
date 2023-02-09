@@ -215,7 +215,6 @@ footer > div p {
 .news-login .container .row {
   flex-wrap: wrap-reverse;
   justify-content: center;
-  align-items: center;
 }
 .news-login h2 {
   font-style: normal;
@@ -327,6 +326,28 @@ footer > div p {
 }
 .news-login .fast-login > div form .btn {
   margin-top: 20px;
+}
+.news-login .latest-articles {
+  border-left: solid 2px #1A1818;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 50px;
+}
+.news-login .latest-articles h2 {
+  color: #B54E3D;
+  font-size: 1.5rem;
+  text-transform: none;
+}
+.news-login .latest-articles a {
+  display: inline-block;
+  padding: 5px;
+  text-decoration: none;
+  color: #1A1818;
+}
+.news-login .latest-articles a:hover {
+  text-decoration: underline;
+  color: #B54E3D;
 }
 
 .all_articles {
@@ -514,6 +535,60 @@ footer > div p {
   padding: 20px;
   border-radius: 30px;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.login .container .row {
+  justify-content: center;
+}
+.login .container .row .col-md-4 {
+  margin: 30px;
+}
+.login .container .row .col-md-4 h2 {
+  text-align: center;
+}
+.login .container .row .col-md-4 input {
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  border: none;
+}
+.login .container .row .col-md-4 form {
+  padding: 30px;
+  box-sizing: border-box;
+  border-radius: 25px;
+  display: grid;
+}
+.login .container .row .col-md-4 form button {
+  border-radius: 10px;
+  background-color: #F2F2F2;
+  box-shadow: none;
+  border: none;
+  padding: 10px;
+  margin: auto;
+  margin-top: 30px;
+  width: -moz-max-content;
+  width: max-content;
+  transition: 0.1s ease-in-out;
+  border: 2px solid #1A1818;
+}
+.login .container .row .col-md-4 form button:hover {
+  background-color: #1A1818;
+  color: #F2F2F2;
+}
+.login .container .row .col-md-4 form label {
+  margin-top: 20px;
+}
+.login .container .row .col-md-4:nth-child(1) h2 {
+  color: #F2F2F2;
+}
+.login .container .row .col-md-4:nth-child(1) form {
+  background: #387178;
+}
+.login .container .row .col-md-4:nth-child(1) form label {
+  color: #F2F2F2;
+  margin-top: 20px;
+}
+.login .container .row .col-md-4:nth-child(1) form button {
+  border: none;
 }
 
 @media (max-width: 992px) {

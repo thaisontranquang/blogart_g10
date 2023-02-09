@@ -21,7 +21,7 @@ $keywords = sql_select("MOTCLE", "*");
         </div>
         <div class="col-md-12">
             <!--Form to create a new article-->
-            <form action="<?php echo ROOT_URL . '/api/article/create.php' ?>" method="post">
+            <form action="<?php echo ROOT_URL . '/api/article/create.php' ?>" method="post" enctype='multipart/form-data'>
 
                 <div class="form-group">
                     <label for="libTitrArt">Titre</label>
@@ -72,14 +72,11 @@ $keywords = sql_select("MOTCLE", "*");
                     }
                     ?>
                 </select><br>
-
-                <input type="file" accept="image/png, image/jpeg" name="urlPhotArt" id="urlPhotArt">
-                <input type="submit" value="Upload">
-
-                <!-- <div class="form-group">
-                    <label for="urlPhotArt">Choisir une image pour votre article</label>
-                    <input id="urlPhotArt" class="form-control" type="file" accept="image/png, image/jpeg" required name="urlPhotArt">
-                </div> -->
+                
+                <div class="form-group">
+                    <label for="file">Choisir une image pour votre article</label>
+                    <input type="file" accept="image/png, image/jpeg" name="file" id="file" class="form-control" required>
+                </div>
 
                 <div class="form-group mt-2">
                     <button type="submit" class="btn btn-primary">Créer</button>

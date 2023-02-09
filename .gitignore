@@ -64,3 +64,6 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.toptal.com/developers/gitignore/api/macos,windows,dotenv
+
+# message de Gwendal sur discord : ATTENTION Rajoutez également cette ligne dans .gitignore si vous ne souhaitez pas push automatiquement vos images dans git 
+/src/images/uploads/*
