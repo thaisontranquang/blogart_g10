@@ -5,7 +5,6 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/config.php';
 
 $eMailMemb = sql_escape($_POST['eMailMemb']);
 $passMemb =  $_POST['passMemb'];
-$numMemb = $_POST['numMemb'];
 $correctPassMemb = sql_select('MEMBRE', 'passMemb', "eMailMemb = '$eMailMemb'")[0]['passMemb'];
 
 if (password_verify($passMemb, $correctPassMemb)) { 
