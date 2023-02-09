@@ -55,7 +55,7 @@ require_once 'config.php';
               Nos articles
             </li>
           </a>
-          <a class="nav-link" aria-current="page" href="/views/backend/connexion/login.php">
+          <a class="nav-link" aria-current="page" href="/login.php">
             <li class="nav-item">
               Se connecter / s'inscrire
             </li>

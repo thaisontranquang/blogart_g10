@@ -1,17 +1,19 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'] . '/config.php';
 
-$eMailMemb = trim($_POST['eMailMemb']);
+$eMailMemb = sql_escape($_POST['eMailMemb']);
 $passMemb =  $_POST['passMemb'];
-//$encryptedPassMemb = password_hash($passMemb, PASSWORD_DEFAULT);
-// $numMemb = $_POST['numMemb'];
-//mettre un and si plusieurs paramètres à sql select
+$hashedPassword = password_hash($passMemb, PASSWORD_BCRYPT);
+$numMemb = $_POST['numMemb'];
 
-$truePassMemb = sql_select('MEMBRE', 'passMemb', "eMailMemb = '$eMailMemb'")[0]['passMemb'];
+$correctPassMemb = sql_select('MEMBRE', 'passMemb', "eMailMemb = '$eMailMemb'")[0]['passMemb'];
 
+password_verify($passMemb, $hashedPassword);
+echo('<br>');
+echo($correctPassMemb);
+echo('<br>');
 
-//vérifaction du mdp
-if ($truePassMemb == $passMemb) { 
+if ($correctPassMemb == password_verify($passMemb, $hashedPassword)) { 
     $numMemb = sql_select('MEMBRE', 'numMemb', "eMailMemb = '$eMailMemb'")[0]['numMemb'];
     $_SESSION["numMemb"] = $numMemb;
     echo "connexion réussie. \n";

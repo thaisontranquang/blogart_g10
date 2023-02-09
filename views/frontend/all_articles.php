@@ -9,7 +9,7 @@ $theme_choosen = $_GET['numThem'];
 <section class="all_articles">
     <h1>Articles</h1>
     <div>
-    <h2>Catégories</h2>
+    <h2>Thématiques</h2>
     <form method="get">
         <fieldset>
         <button type="button" class="btn"> <a href="?numThem=all">Tous</a></button>
