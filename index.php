@@ -44,9 +44,9 @@ $latestArticles = sql_select("ARTICLE", "*", "", "numArt DESC", 10);
                 <h3>Connectez-vous</h3>
                 <form action="<?php echo ROOT_URL . '/api/connexion/login.php' ?>" method="post">
                 <div class="form-group">
-                        <label class="text-champ">Adresse mail</label>
+                        <label class="text-champ">Adresse mail *</label>
                         <input id="eMailMemb" class="form-control" type="text" name="eMailMemb" required>
-                        <label class="text-champ">Mot de passe</label>
+                        <label class="text-champ">Mot de passe *</label>
                         <input id="passMemb" class="form-control" type="password" name="passMemb" required>
                     </div>
                     <button type="submit" class="btn">Connexion</button>

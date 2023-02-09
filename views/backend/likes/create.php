@@ -41,3 +41,8 @@ $articles = sql_select("ARTICLE", "*");
         </div>
     </div>
 </div>
+
+
+<?php
+include '../../../footer.php';
+?> // contains the footer

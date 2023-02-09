@@ -39,3 +39,7 @@ $numMemb = sql_select("COMMENT","numMemb", "numCom = $numCom")[0]['numMemb'];
         </div>
     </div>
 </div>
+
+<?php
+include '../../../footer.php';
+?> // contains the footer

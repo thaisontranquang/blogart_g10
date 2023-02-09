@@ -72,3 +72,8 @@ $dtModCom = sql_select("COMMENT","dtModCom", "numCom = $numCom")[0]['dtModCom'];
         </div>
     </div>
 </div>
+
+
+<?php
+include '../../../footer.php';
+?> // contains the footer
