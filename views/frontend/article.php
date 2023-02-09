@@ -4,8 +4,15 @@ sql_connect();
 $numArt = $_GET['numArt'];
 $articles = sql_select("ARTICLE", "*", "numArt = $numArt");
 $libThem = sql_select('ARTICLE INNER JOIN THEMATIQUE ON ARTICLE.numThem = THEMATIQUE.numThem', 'libThem', "ARTICLE.numArt=$numArt")[0]['libThem'];
-$keywords = sql_select('ARTICLE INNER JOIN THEMATIQUE ON ARTICLE.numThem = THEMATIQUE.numThem', 'libThem', "ARTICLE.numArt=$numArt");
 $comments = sql_select('ARTICLE INNER JOIN COMMENT ON ARTICLE.numArt = COMMENT.numArt', '*', "ARTICLE.numArt=$numArt");
+$likes = sql_select('ARTICLE INNER JOIN LIKEART ON ARTICLE.numArt = LIKEART.numArt', 'likeA', "ARTICLE.numArt=$numArt");
+
+$keywords = sql_select('MOTCLEARTICLE INNER JOIN MOTCLE ON MOTCLEARTICLE.numMotCle = MOTCLE.numMotCle', 'libMotCle', "MOTCLEARTICLE.numArt=$numArt");
+
+foreach($keywords as $keyword){
+    echo($keyword['libMotCle']);
+}
+
 ?>
 
 <section class="show-article">
@@ -49,7 +56,6 @@ $comments = sql_select('ARTICLE INNER JOIN COMMENT ON ARTICLE.numArt = COMMENT.n
         </div>
         <div class="row">
             <div class="col-xl-3">
-                bouton like
             </div>
             <div class="col-xl-6 comment-section">
             <?php if (isset($_SESSION['numStat'])) {
