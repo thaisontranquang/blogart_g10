@@ -68,7 +68,7 @@ $keywords = sql_select("MOTCLE", "*");
                 <select name="numMotCle" multiple>
                     <?php
                     foreach($keywords as $keyword){
-                      echo "<option value='".$keyword['numMotCle']."'>".$keyword['libMotCle']."</option>";
+                    echo "<option value='".$keyword['numMotCle']."'>".$keyword['libMotCle']."</option>";
                     }
                     ?>
                 </select><br>

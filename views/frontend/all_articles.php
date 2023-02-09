@@ -38,7 +38,7 @@ $theme_choosen = $_GET['numThem'];
                 echo ('
         <div class="col-xl-3 col-md-6 col-sm-12">
             <div class="card">
-                <img src="/src/images/index.jpeg" class="card-img-top" alt="Image dernière actualité">
+                <img src="' . ROOT_URL . $article['urlPhotArt'] . '" class="card-img-top" alt="Image dernière actualité">
                 <div class="card-body">
                 <h5 class="card-title">' . $article['libTitrArt'] . '</h5>
                 <h6>le ' . $article['dtCreArt'] . '</h6>

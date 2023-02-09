@@ -24,10 +24,10 @@ function curl($url, $type, $data = null, $headers = null) {
 // pour upload une image, fonction de Gwendal
 function upload_image($files)
 {
-    $target_dir = $_SERVER['DOCUMENT_ROOT'] . '/src/images/uploads/';
+    $target_dir = '/src/images/uploads/';
     $target_file = $target_dir . uniqid() . basename($files["file"]["name"]);
     $uploadOk = 1;
-    $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+    $imageFileType = strtolower(pathinfo($_SERVER['DOCUMENT_ROOT'] . $target_file, PATHINFO_EXTENSION));
 
     // Check if image file is a actual image or fake image
     $check = getimagesize($files["file"]["tmp_name"]);
@@ -40,7 +40,7 @@ function upload_image($files)
     }
 
     // Check if file already exists
-    if (file_exists($target_file)) {
+    if (file_exists($_SERVER['DOCUMENT_ROOT'] . $target_file)) {
         exit("Sorry, file already exists.");
         return 0;
         $uploadOk = 0;
@@ -69,8 +69,8 @@ function upload_image($files)
         return 0;
         // if everything is ok, try to upload file
     } else {
-        if (move_uploaded_file($files["file"]["tmp_name"], $target_file)) {
-            $path = '/src/images/uploads/' . basename($files["file"]["name"]);
+        if (move_uploaded_file($files["file"]["tmp_name"], $_SERVER['DOCUMENT_ROOT'] . $target_file)) {
+            $path = $target_file;
             return $path;
         } else {
             exit("Sorry, there was an error uploading your file.");
