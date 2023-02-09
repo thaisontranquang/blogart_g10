@@ -4,10 +4,10 @@ include '../../../header.php'; // contains the header and call to config.php
 
 //Security check
 //Level 1 mean administator in DB
-/* if (!check_access(1)) {
+if (!check_access(2)) {
     header('Location: /'); //Redirect to home
     exit();
-} */
+} 
 
 //Load all statuses
 $comments = sql_select("COMMENT", "*");
@@ -50,7 +50,9 @@ $comments = sql_select("COMMENT", "*");
                     <?php } ?>
                 </tbody>
             </table>
-            <a href="create.php" class="btn btn-success">Create</a>
+            <?php 
+                        if (check_access(1)) {
+                            echo('<a href="create.php" class="btn btn-success">Create</a>');}?>
         </div>
     </div>
 

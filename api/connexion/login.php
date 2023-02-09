@@ -1,40 +1,31 @@
 <?php
+require_once '../../header.php';
+
 require_once $_SERVER['DOCUMENT_ROOT'] . '/config.php';
 
-$eMailMemb = trim($_POST['eMailMemb']);
+$eMailMemb = sql_escape($_POST['eMailMemb']);
 $passMemb =  $_POST['passMemb'];
-//$encryptedPassMemb = password_hash($passMemb, PASSWORD_DEFAULT);
-// $numMemb = $_POST['numMemb'];
-//mettre un and si plusieurs paramètres à sql select
+$numMemb = $_POST['numMemb'];
+$correctPassMemb = sql_select('MEMBRE', 'passMemb', "eMailMemb = '$eMailMemb'")[0]['passMemb'];
 
-$truePassMemb = sql_select('MEMBRE', 'passMemb', "eMailMemb = '$eMailMemb'")[0]['passMemb'];
+if (password_verify($passMemb, $correctPassMemb)) { 
+    $member = sql_select('MEMBRE', '*', "eMailMemb = '$eMailMemb'")[0];
+    $_SESSION["numMemb"] = $member['numMemb'];
+    $_SESSION['pseudoMemb'] = $member['pseudoMemb'];
+    $_SESSION['numStat'] = $member['numStat'];
+    ?>
 
-
-//vérifaction du mdp
-if ($truePassMemb == $passMemb) { 
-    $numMemb = sql_select('MEMBRE', 'numMemb', "eMailMemb = '$eMailMemb'")[0]['numMemb'];
-    $_SESSION["numMemb"] = $numMemb;
-    echo "connexion réussie. \n";
-
-    
-        $_SESSION["pseudoMemb"] = sql_select('MEMBRE', 'pseudoMemb', "eMailMemb = '$eMailMemb'")[0]['pseudoMemb'];
-        /* now displaying the session id..... */
-        echo "Le numéro de l'utilisateur de cette session est : " . $numMemb;
-        echo " Le pseudonyme de l'utilisateur est " . $_SESSION['pseudoMemb'];
-
-
-        /* now destroying the session id */
-
-        // if (isset($_SESSION['pseudoMemb'])) {
-        //     $_SESSION = array();
-        //     unset($_SESSION);
-        //     session_destroy();
-        //     echo "session destroyed...";
-        // }
-
-        // var_dump("$numMemb", "$passMemb");
+    <?php
+    header('Location: ../../index.php');
 } else {
+    ?>
 
-    echo "connexion échouée, erreur dans votre mdp ou votre adresse mail !";
+<p>connexion échouée</p>
+
+    <?php
 }
+
+require_once '../../footer.php';
+
 ?>
+

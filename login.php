@@ -1,5 +1,5 @@
 <?php
-include '../../../header.php';
+include 'header.php';
 
 require_once $_SERVER['DOCUMENT_ROOT'] . '/config.php';
 
@@ -14,15 +14,15 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/config.php';
             <form action="<?php echo ROOT_URL . '/api/register/register.php' ?>" method="post">
                 <label for="nomMemb">Nom * </label>
                 <input class="form-control" type="text" id="nameMemb" name='nameMemb' required>
-                <label for="prenomMemb">Prénom * </label>
+                <label for="surnameMemb">Prénom * </label>
                 <input class="form-control" type="text" id="surnameMemb" name='surnameMemb' required>
-                <label for="prenomMemb">Pseudo * </label>
+                <label for="pseudoMemb">Pseudo * </label>
                 <input class="form-control" type="text" id="pseudoMemb" name='pseudoMemb' required>
                 <label for="eMailMemb">Adresse mail * </label>
                 <input class="form-control" type="text" id="eMailMemb" name='eMailMemb' required>
                 <label for="passMemb">Mot de passe * </label>
                 <input class="form-control" type="password" id="passMemb" name='passMemb' required>
-                <button type="submit">Créer un compte</button>
+                <a href="#"><button type="submit">Créer un compte</button></a>
             </form>
         </div>
     </div>
@@ -41,3 +41,5 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/config.php';
             </div>
         </div>
     </div>
+
+    <?php require_once 'footer.php'; ?>

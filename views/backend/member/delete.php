@@ -2,10 +2,10 @@
 include '../../../header.php';
 //Security check
 //Level 1 mean administator in DB
-/* if (!check_access(1)) {
+if (!check_access(1)) {
     header('Location: /'); //Redirect to home
     exit();
-} */
+} 
 
 $numMemb = $_GET['numMemb'];
 $pseudoMemb = sql_select("MEMBRE","pseudoMemb", "numMemb = $numMemb")[0]['pseudoMemb'];
@@ -36,7 +36,7 @@ $numStat = sql_select("MEMBRE","numStat", "numMemb = $numMemb")[0]['numStat'];
                     <input id="nomMemb" class="form-control" type="text" name="nomMemb" value="<?php echo($nomMemb) ?>" readonly="readonly">
                     <label for="eMailMemb">Email</label>
                     <input id="eMailMemb" class="form-control" type="email" name="eMailMemb" value="<?php echo($eMailMemb) ?>" readonly="readonly">
-                    <label for="passMemb">Prénom</label>
+                    <label for="passMemb">Mot de passe</label>
                     <input id="passMemb" class="form-control" type="text" name="passMemb" value="<?php echo($passMemb) ?>" readonly="readonly">
                     <input id="numMemb" class="form-control" type="text" name="numMemb" value="<?php echo($numMemb) ?>" hidden>
                 </div>
