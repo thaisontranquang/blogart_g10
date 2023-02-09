@@ -1,4 +1,6 @@
 <?php
+//start session
+session_start();
 
 //define ROOT_PATH
 define('ROOT', $_SERVER['DOCUMENT_ROOT']);

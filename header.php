@@ -1,5 +1,3 @@
-<?php session_start() ?>
-
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -31,7 +29,7 @@ require_once 'config.php';
 
 <style>
   <?php
-    echo (':root{ font-size:' . $_COOKIE['fontSize'] . 'px;}');
+  echo (':root{ font-size:' . $_COOKIE['fontSize'] . 'px;}');
   ?>
 </style>
 
@@ -55,25 +53,56 @@ require_once 'config.php';
               Nos articles
             </li>
           </a>
-          <a class="nav-link" aria-current="page" href="/login.php">
-            <li class="nav-item">
-              Se connecter / s'inscrire
-            </li>
-          </a>
-          <a class="nav-link" href="/views/backend/dashboard.php">
-            <li class="nav-item">
-              Admin
-            </li>
-          </a>
+          <?php
+          if (isset($_SESSION['numStat'])) {
+          ?>
+            <a class="nav-link" aria-current="page" href="/api/connexion/logout.php">
+              <li class="nav-item">
+                Déconnexion
+              </li>
+            </a>
+          <?php
+          } else { ?>
+            <a class="nav-link" aria-current="page" href="/login.php">
+              <li class="nav-item">
+                Se connecter / s'inscrire
+              </li>
+            </a>
+          <?php
+          }
+          ?>
+          <?php
+          if ($_SESSION['numStat'] == '1' or $_SESSION['numStat'] == '2') {
+          ?>
+            <a class="nav-link" href="/views/backend/dashboard.php">
+              <li class="nav-item">
+                Admin
+              </li>
+            </a>
+          <?php
+          }
+          ?>
         </ul>
       </div>
     </div>
   </nav>
 
   <section class="accessibility-features">
+    <?php
+    if(isset($_SESSION['numStat'])) {
+    ?>
+      <p>Bienvenue
+        <span><?php
+        echo (' ' . $_SESSION['pseudoMemb']); ?></span>, <br>
+        vous êtes bien connecté·e !
+      </p>
+    <?php
+    } ?>
+    <div>
     <button type="button" class="btn" onclick="increaseSize()">Agrandir la police <img src="/src/images/trending_up_FILL0_wght400_GRAD0_opsz48.svg" alt="Bouton agrandir le texte"></button>
     <button type="button" class="btn" onclick="decreaseSize()">Réduire la police <img src="/src/images/trending_down_FILL0_wght400_GRAD0_opsz48.svg" alt="Bouton réduire le texte"></button>
     <button type="button" class="btn" onclick="resetSize()">Réinitialiser<img src="/src/images/restart_alt_FILL0_wght400_GRAD0_opsz48.svg" alt="Réinitialiser taille"></button>
+    </div>
   </section>
 
   <div class="backdrop-cookie">

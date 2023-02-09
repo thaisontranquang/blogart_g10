@@ -66,29 +66,46 @@ nav {
     width: 100%;
     padding: $padding-desktop;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+    flex-wrap: wrap;
     margin-top: 30px;
 
-    .btn {
-        align-items: center;
-        justify-content: center;
-        padding: 10px;
-        margin: 3px;
-        background-color: $ba-third-color;
-        color: $ba-first-color;
-        transition: 0.1s ease-in-out;
+    p {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.2rem;
 
-        img {
-            width: 30px;
-            margin-top: -2px;
-            filter: invert(100%) sepia(21%) saturate(13%) hue-rotate(188deg) brightness(113%) contrast(90%);
+        span {
+            color: $ba-seventh-color;
+            font-size: 1.5rem;
+            font-weight: bold;
         }
     }
 
-    .btn:focus,
-    .btn:hover {
-        background-color: $ba-sixth-color;
-        color: $ba-first-color
+    >div {
+        margin-left: auto;
+
+        .btn {
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            margin: 3px;
+            background-color: $ba-third-color;
+            color: $ba-first-color;
+            transition: 0.1s ease-in-out;
+
+            img {
+                width: 30px;
+                margin-top: -2px;
+                filter: invert(100%) sepia(21%) saturate(13%) hue-rotate(188deg) brightness(113%) contrast(90%);
+            }
+        }
+
+        .btn:focus,
+        .btn:hover {
+            background-color: $ba-sixth-color;
+            color: $ba-first-color
+        }
     }
 }
 
@@ -544,8 +561,19 @@ footer {
                 }
             }
 
-            .comment-section{
-                margin-top:50px;
+            .comment-section {
+                margin-top: 50px;
+
+                textarea {
+                    background-color: $ba-fourth-color;
+                    height: auto;
+                    padding: 20px;
+                    border-radius: 30px;
+                    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 1rem;
+                }
 
                 .btn {
                     background: $ba-third-color;
@@ -556,29 +584,30 @@ footer {
                     margin: 20px;
                     transition: 0.1s ease-in-out;
                 }
-    
+
                 .btn:hover {
                     background: $ba-sixth-color;
                 }
+
                 .comment {
-                    display:flex;
+                    display: flex;
                     flex-direction: column;
-                    width:100%;
-                    
-                    span{
-                        .pseudomemb{
-                            font-style:italic;
-                            color:$ba-seventh-color;
-                            margin:20px 0 5px 0;
-                            display:inline-block;
+                    width: 100%;
+
+                    span {
+                        .pseudomemb {
+                            font-style: italic;
+                            color: $ba-seventh-color;
+                            margin: 20px 0 5px 0;
+                            display: inline-block;
                         }
                     }
 
-                    .comment-body{
+                    .comment-body {
                         background-color: $ba-fourth-color;
-                        height:auto;
-                        padding:20px;
-                        border-radius:30px;
+                        height: auto;
+                        padding: 20px;
+                        border-radius: 30px;
                         box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
                     }
                 }
@@ -644,6 +673,20 @@ footer {
     footer {
         >div {
             padding: 1%;
+        }
+    }
+}
+
+@media (max-width:600px){
+    .show-article {
+
+        .container {
+    
+            .row {
+                .content-article {
+                    border-left: 0px;
+                }
+            }
         }
     }
 }
