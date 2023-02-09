@@ -72,7 +72,7 @@ require_once 'config.php';
           }
           ?>
           <?php
-          if ($_SESSION['numStat'] == '1' or $_SESSION['numStat'] == '2') {
+          if (check_access(2)) {
           ?>
             <a class="nav-link" href="/views/backend/dashboard.php">
               <li class="nav-item">
