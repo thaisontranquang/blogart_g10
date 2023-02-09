@@ -52,7 +52,7 @@ $comments = sql_select('ARTICLE INNER JOIN COMMENT ON ARTICLE.numArt = COMMENT.n
                 fdvsdgbqd
             </div>
             <div class="col-xl-6 comment-section">
-            <form action="<?php echo ROOT_URL . '/api/comment/create.php' ?>" method="post">
+            <form action="<?php echo ROOT_URL . '/api/comment/createCom.php' ?>" method="post">
                 <div class="form-group">
                     <label for="libCom">Ajouter un commentaire :</label>
                     <input id="libCom" class="form-control" type="text" placeholder="Ecrivez votre commentaire" name="libCom" required>
