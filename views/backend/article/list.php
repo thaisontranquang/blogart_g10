@@ -36,8 +36,8 @@ $articles = sql_select("ARTICLE", "*");
                             <?php 
                         if (check_access(1)) {
                             echo('<td>
-                                <a href="update.php?numArt=<?php echo $article[\'numArt\']; ?>" class="btn btn-primary">Editer</a>
-                                <a href="delete.php?numArt=<?php echo $article[\'numArt\']; ?>" class="btn btn-danger">Suppression</a>');}?>
+                                <a href="update.php?numArt=' . $article['numArt'] . '"class="btn btn-primary">Editer</a>
+                                <a href="delete.php?numArt=' . $article['numArt'] . '"class="btn btn-danger">Suppression</a>');}?>
                             </td>
                         </tr>
                     <?php } ?>
