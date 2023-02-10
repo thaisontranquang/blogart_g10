@@ -34,24 +34,28 @@ $members = sql_select("MEMBRE", "*");
                     </tr>
                 </thead>
                 <tbody>
-                    <?php foreach ($members as $member) { ?>
+                    <?php foreach ($members as $member) { 
+                        ?>
                         <tr>
                             <td><?php echo $member['numMemb']; ?></td>
                             <td><?php echo $member['prenomMemb']; ?></td>
                             <td><?php echo $member['nomMemb']; ?></td>
                             <td><?php echo $member['pseudoMemb']; ?></td>
                             <?php 
-                        if (check_access(1)) {
-                            echo('<td><?php echo $member[\'passMemb\']; ?></td>');}?>
+                        if (check_access(1)) {?>
+                            <td><?php echo $member['passMemb']; ?></td>
                             <td><?php echo $member['eMailMemb']; ?></td>
                             <td><?php echo $member['dtCreaMemb']; ?></td>     
                             <td><?php echo $member['numStat']; ?></td>
+                            <?php 
+                        }?>
                             <td>
                             <?php 
-                        if (check_access(1)) {
-                            echo('<a href="edit.php?numMemb=<?php echo $member[\'numMemb\']; ?>" class="btn btn-primary">Editer</a>
-                                <a href="delete.php?numMemb=<?php echo $member[\'numMemb\']; ?>" class="btn btn-danger">Supprimer</a>');}?>
+                        if (check_access(1)) {?>
+                            <a href="edit.php?numMemb=<?php echo $member['numMemb']; ?>" class="btn btn-primary">Editer</a>
+                                <a href="delete.php?numMemb=<?php echo $member['numMemb']; ?>" class="btn btn-danger">Supprimer</a>
                             </td>
+                            <?php }?>
                         </tr>
                     <?php } ?>
                 </tbody>
@@ -59,6 +63,6 @@ $members = sql_select("MEMBRE", "*");
             <a href="create.php" class="btn btn-success">Créer</a>
         </div>
     </div>
-
+    </div>
 <?php
 include '../../../footer.php'; // contains the footer

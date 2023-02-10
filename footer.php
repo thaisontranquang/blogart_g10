@@ -8,17 +8,14 @@
                 <div class="col">
                     <ul>
 
-                        <li><a href="">Accueil</a></li>
-                        <li><a href="">Nos articles</a></li>
-                        <li><a href="">Se connecter</a></li>
-                        <li><a href="">S'inscrire</a></li>
-                        <li><a href="">Admin</a></li>
+                        <li><a href="/index.php">Accueil</a></li>
+                        <li><a href="/views/frontend/all_articles.php?numThem=all">Nos articles</a></li>
+                        <li><a href="/login.php">Se connecter / S'inscrire</a></li>
                     </ul>
                 </div>
                 <div class="col">
                     <ul>
-                        <li><a href="/views/frontend/mentions-legales.php">Mentions légales</a></li>
-                        <li><a href="/views/frontend/mentions-legales.php">CGU</a></li>
+                        <li><a href="/views/frontend/mentions-legales.php">Mentions légales / CGU</a></li>
                         <li><a href="/views/frontend/politique-conf.php">Politique de confidentialité</a></li>
                     </ul>
                 </div>

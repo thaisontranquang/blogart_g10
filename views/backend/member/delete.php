@@ -47,3 +47,7 @@ $numStat = sql_select("MEMBRE","numStat", "numMemb = $numMemb")[0]['numStat'];
         </div>
     </div>
 </div>
+</div>
+<?php
+include '../../../footer.php';
+?> 

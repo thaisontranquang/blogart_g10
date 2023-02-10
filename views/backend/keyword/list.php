@@ -42,6 +42,6 @@ $keywords = sql_select("MOTCLE", "*");
             <a href="create.php" class="btn btn-success">Créer</a>
         </div>
     </div>
-
+    </div>
 <?php
-include '../../../footer.php'; // contains the footer
+include '../../../footer.php'; ?>

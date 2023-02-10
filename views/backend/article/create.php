@@ -86,8 +86,8 @@ $keywords = sql_select("MOTCLE", "*");
 
                 <div class="form-group">
                     <label for="file">Choisir une image pour votre article</label>
-                    <input type="file" accept="image/png, image/jpeg" name="file" id="file" class="form-control" required>
-                </div>
+                    <input type="file" accept="image/png, image/jpeg" name="file" id="file" class="form-control">
+                </div> -->
 
                 <div class="form-group mt-2">
                     <button type="submit" class="btn btn-primary">Créer</button>
@@ -97,3 +97,7 @@ $keywords = sql_select("MOTCLE", "*");
     </div>
 </div>
 <script src="script.js"></script>
+
+<?php
+include '../../../footer.php';
+?> 

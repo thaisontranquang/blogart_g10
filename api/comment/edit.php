@@ -10,7 +10,7 @@ $numArt = $_POST['numArt'];
 $numMemb = $_POST['numMemb'];
 $dtModCom = $_POST['dtModCom'];
 
-sql_update('COMMENT',"libCom = '$libCom', attModOk = '$attModOk', notifComKOAff = '$notifComKOAff', numArt = '$numArt', numMemb ='$numMemb', dtModCom = '$dtModCom'","numCom = $numCom");
+sql_update('COMMENT', "libCom = '$libCom', attModOk = '$attModOk', notifComKOAff = '$notifComKOAff', numArt = '$numArt', numMemb ='$numMemb', dtModCom = '$dtModCom'", "numCom = $numCom");
 header('Location: ../../views/backend/comment/list.php');
 
 ?>

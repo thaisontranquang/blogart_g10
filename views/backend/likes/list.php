@@ -4,10 +4,10 @@ include '../../../header.php'; // contains the header and call to config.php
 
 //Security check
 //Level 1 mean administator in DB
-/* if (!check_access(1)) {
+if (!check_access(1)) {
     header('Location: /'); //Redirect to home
     exit();
-} */
+} 
 
 //Load all statuses
 $likes = sql_select("LIKEART", "*");
@@ -41,6 +41,6 @@ $likes = sql_select("LIKEART", "*");
             <a href="create.php" class="btn btn-success">Créer</a>
         </div>
     </div>
-
+    </div>
 <?php
 include '../../../footer.php'; // contains the footer

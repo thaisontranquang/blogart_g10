@@ -6,7 +6,7 @@ include '../../header.php';
 if (!check_access(2)) {
     header('Location: /'); //Redirect to home
     exit();
-} 
+}
 
 ?>
 
@@ -19,7 +19,6 @@ if (!check_access(2)) {
                 <p>Bienvenue sur le panneau administratif</p>
             </div>
             <div class="col-md-12">
-
                 <table class="table table-striped">
                     <thead>
                         <tr>
@@ -28,9 +27,9 @@ if (!check_access(2)) {
                         </tr>
                     </thead>
                     <tbody>
-                    <?php 
+                        <?php
                         if (check_access(1)) {
-                            echo('
+                            echo ('
                         <tr>
                             <td>Statuts</td>
                             <td>
@@ -40,31 +39,33 @@ if (!check_access(2)) {
                             <td></td>
                             </td>
                         </tr>
-                        ');} ?>
+                        ');
+                        } ?>
                         <tr>
                             <td>Membres</td>
                             <td>
                                 <a href="/views/backend/member/list.php" class="btn btn-primary">Liste</a>
-                                <?php 
-                        if (check_access(1)) {
-                            echo('<a href="/views/backend/member/create.php" class="btn btn-success">Créer un nouveau membre</a>');}?>
+                                <?php
+                                if (check_access(1)) {
+                                    echo ('<a href="/views/backend/member/create.php" class="btn btn-success">Créer un nouveau membre</a>');
+                                } ?>
                             </td>
                         </tr>
                         <tr>
                             <td>Articles</td>
                             <td>
                                 <a href="/views/backend/article/list.php" class="btn btn-primary">Liste</a>
-                                <?php 
-                        if (check_access(1)) {
-                            echo('<a href="/views/backend/article/create.php" class="btn btn-success">Créer</a>');
-                        }?>
+                                <?php
+                                if (check_access(1)) {
+                                    echo ('<a href="/views/backend/article/create.php" class="btn btn-success">Créer</a>');
+                                } ?>
 
                             </td>
                             <td></td>
                         </tr>
-                        <?php 
+                        <?php
                         if (check_access(1)) {
-                            echo('
+                            echo ('
                         <tr>
                             <td>Thématiques</td>
                             <td>
@@ -74,20 +75,21 @@ if (!check_access(2)) {
                             <td></td>
                         </tr>
                         ');
-                    } 
-                    ?>
+                        }
+                        ?>
                         <tr>
                             <td>Commentaires</td>
                             <td>
                                 <a href="/views/backend/comment/list.php" class="btn btn-primary">Liste</a>
-                                <?php 
-                        if (check_access(1)) {
-                            echo('
-                                <a href="/views/backend/comment/create.php" class="btn btn-success">Créer</a>');}?>
+                                <?php
+                                if (check_access(1)) {
+                                    echo ('
+                                <a href="/views/backend/comment/create.php" class="btn btn-success">Créer</a>');
+                                } ?>
                             </td>
                             <td></td>
                         </tr>
-                    
+
 
                         <tr>
                             <td>Likes</td>
