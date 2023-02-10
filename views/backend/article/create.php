@@ -23,6 +23,7 @@ $keywords = sql_select("MOTCLE", "*");
             <!--Form to create a new article-->
             <form action="<?php echo ROOT_URL . '/api/article/create.php' ?>" method="post" enctype='multipart/form-data'>
 
+            
                 <div class="form-group">
                     <label for="libTitrArt">Titre</label>
                     <textarea id="libTitrArt" class="form-control" type="text" placeholder="Entrez votre titre" required name="libTitrArt"></textarea>
@@ -67,28 +68,34 @@ $keywords = sql_select("MOTCLE", "*");
                         <option value="<?php echo $thematic['numThem']; ?>"><?php echo $thematic['libThem']; ?></option>
                     <?php } ?>
                 </select><br>
-
-                <label for="numMotCle">Sélectionner des mots clés</label><br>
-                <select name="numMotCle" multiple>
-                    <?php
-                    foreach($keywords as $keyword){
-                    echo "<option value='".$keyword['numMotCle']."'>".$keyword['libMotCle']."</option>";
-                    }
-                    ?>
-                </select><br>
                 
-<!--                 <div class="form-group">
+
+                <!-- <label for="numMotCle_div">Sélectionner vos mots clés</label>
+                <div name="numMotCle_div" style="max-height: 150px; overflow: auto" >
+                    <?php foreach ($keywords as $keyword) { ?>
+                        <input name="numMotCle" type="checkbox" value="<?php echo $keyword['numMotCle'];?>"><?php echo $keyword['libMotCle']; ?><br>
+                    <?php } ?>
+                </div>     -->
+                
+                <?php foreach ($keywords as $keyword) { ?>
+                    <input type="checkbox" name="keyword[]" value="<?php echo $keyword['numMotCle']; ?>">
+                    <?php echo $keyword['libMotCle']; ?><br>
+                <?php } ?>
+                
+                        
+                <!-- <div class="form-group">
                     <label for="file">Choisir une image pour votre article</label>
-                    <input type="file" accept="image/png, image/jpeg" name="file" id="file" class="form-control">
+                    <input type="file" accept="image/png, image/jpeg" name="file" id="file" class="form-control" required>
                 </div> -->
 
                 <div class="form-group mt-2">
-                    <button type="submit" class="btn btn-primary">Créer</button>
+                    <button type="submit" name="submit" value="submit" class="btn btn-primary">Créer</button>
                 </div>
             </form>
         </div>
     </div>
 </div>
+<script src="script.js"></script>
 
 <?php
 include '../../../footer.php';
