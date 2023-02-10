@@ -87,7 +87,6 @@ if (!check_access(2)) {
                             <td></td>
                         </tr>
                     
-
                         <tr>
                             <td>Likes</td>
                             <td>
@@ -108,5 +107,9 @@ if (!check_access(2)) {
             </div>
         </div>
     </div>
-
 </div>
+</div>
+
+<?php
+include '../../footer.php';
+?>
