@@ -13,8 +13,12 @@ $parag3Art = sql_escape($_POST["parag3Art"]);
 $libConclArt = sql_escape($_POST["libConclArt"]);
 $numThem = sql_escape($_POST["numThem"]);
 
+if(isset($_FILES)) {
+    $path = upload_image($_FILES);
+    }
+    $urlPhotArt = sql_escape($path);
 
-sql_update('ARTICLE', "libTitrArt = '$libTitrArt', libChapoArt = '$libChapoArt', libAccrochArt = '$libAccrochArt', parag1Art = '$parag1Art', libSsTitr1Art = '$libSsTitr1Art', parag2Art = '$parag2Art', libSsTitr2Art = '$libSsTitr2Art', parag3Art = '$parag3Art', libConclArt = '$libConclArt', urlPhotArt = '$urlPhotArt', numThem = '$numThem'", "numArt = $numArt");
+sql_update('ARTICLE', "libTitrArt = '$libTitrArt', libChapoArt = '$libChapoArt', libAccrochArt = '$libAccrochArt', parag1Art = '$parag1Art', libSsTitr1Art = '$libSsTitr1Art', parag2Art = '$parag2Art', libSsTitr2Art = '$libSsTitr2Art', parag3Art = '$parag3Art', libConclArt = '$libConclArt', urlPhotArt = '$urlPhotArt', numThem = '$numThem',  urlPhotArt = '$urlPhotArt'", "numArt = $numArt");
 
 $numArt = sql_select('ARTICLE', 'numArt', "libTitrArt = '$libTitrArt'")[0]['numArt'];
 if (isset($_POST['submit'])) {
