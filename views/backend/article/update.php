@@ -19,6 +19,8 @@ $parag3Art = sql_select("ARTICLE", "parag3Art", "numArt = $numArt")[0]['parag3Ar
 $libConclArt = sql_select("ARTICLE", "libConclArt", "numArt = $numArt")[0]['libConclArt'];
 $urlPhotArt = sql_select("ARTICLE", "urlPhotArt", "numArt = $numArt")[0]['urlPhotArt'];
 
+$keywords = sql_select("MOTCLE", "*");
+
 //Load all thematics
 $thematics = sql_select("THEMATIQUE", "*");
 ?>
@@ -78,9 +80,15 @@ $thematics = sql_select("THEMATIQUE", "*");
                         <option value="<?php echo $thematic['numThem']; ?>"><?php echo $thematic['libThem']; ?></option>
                     <?php } ?>
                 </select>
+<br>
+                <?php 
+                foreach ($keywords as $keyword) { ?>
+                    <input type="checkbox" name="keyword[]" value="<?php echo $keyword['numMotCle']; ?>">
+                    <?php echo $keyword['libMotCle']; ?><br>
+                <?php } ?>
 
                 <div class="form-group mt-2">
-                    <button type="submit" class="btn btn-danger">Confirmer l'édition ?</button>
+                    <button type="submit" name="submit" value="submit" class="btn btn-danger">Confirmer l'édition ?</button>
                 </div>
             </form>
         </div>

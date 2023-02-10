@@ -31,39 +31,3 @@ if (isset($_POST['submit'])) {
 }
 
 header('Location: ../../views/backend/article/list.php');
-
-
-exit();
-
-
-    $selected = $_POST['numMotCle'];
-    var_dump($selected);
-    foreach ($selected as $value) {
-    }
-
-
-
-    if(isset($_FILES)) {
-        $path = upload_image($_FILES);
-        }
-        $urlPhotArt = sql_escape($path);
-
-
-
-
-
-
-
-header('Location: ../../views/backend/article/list.php');
-
-
-
-
-$numArt = sql_select('ARTICLE', 'numArt', "libTitrArt = '$libTitrArt'")[0]['numArt'];
-$numMotCles = $_POST['numMotCle'];
-var_dump($numMotCles);
-
-foreach ($numMotCles as $numMotCle) {
-   sql_insert('MOTCLEARTICLE', 'numMotCle, numArt', "$numMotCle,$numArt");
-}
-exit;

@@ -11,6 +11,7 @@ if (!check_access(2)) {
 
 //Load all articles
 $articles = sql_select("ARTICLE", "*");
+$keywords = sql_select("MOTCLE", "*");
 ?>
 
 <!-- Bootstrap default layout to display all article in foreach -->
