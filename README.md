@@ -5,8 +5,8 @@ Projet MMI 2023
 
 ## Fonctionnalités
 
-=> Implémentées : Blog responsive, pop-up acceptation cookies, CRUD articles, CRUD membres, CRUD likes, CRUD statuts, CRUD thématiques, CRUD commentaires, CRUD mots-clés, ajustement de la police selon utilisateur, inscription et connexion avec $_SESSION, affichage des derniers articles, affichage de tous les articles, affichage d'un article, affichage des articles par thématique
-=> Non implémentées : Suppression/édition d'un commentaire côté front-office, unliker un article côté front-office, modifier son pseudonyme, mode nuit, afficher mot de passe à l'inscription/la connexion.
+=> Implémentées : Blog responsive, pop-up acceptation cookies, CRUD articles, CRUD membres, CRUD likes, CRUD statuts, CRUD thématiques, CRUD commentaires, CRUD mots-clés, ajustement de la police selon utilisateur, inscription et connexion avec $_SESSION, affichage des derniers articles, affichage de tous les articles, affichage d'un article, affichage des articles par thématique, ajout d'une image dans un article.
+=> Non implémentées : Suppression/édition d'un commentaire côté front-office, unliker un article côté front-office, modifier son pseudonyme, mode nuit, afficher mot de passe à l'inscription/la connexion, modifier la photo d'un article. 
 
 ## Panel Admin
 

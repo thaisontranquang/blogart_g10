@@ -7,8 +7,6 @@ $libThem = sql_select('ARTICLE INNER JOIN THEMATIQUE ON ARTICLE.numThem = THEMAT
 $comments = sql_select('ARTICLE INNER JOIN COMMENT ON ARTICLE.numArt = COMMENT.numArt', '*', "ARTICLE.numArt=$numArt");
 $likes = sql_select('ARTICLE INNER JOIN LIKEART ON ARTICLE.numArt = LIKEART.numArt', 'likeA', "ARTICLE.numArt=$numArt AND likeA = 1");
 $keywords = sql_select('MOTCLEARTICLE INNER JOIN MOTCLE ON MOTCLEARTICLE.numMotCle = MOTCLE.numMotCle', 'libMotCle', "MOTCLEARTICLE.numArt=$numArt");
-
-print_r($likeUser);
 ?>
 
 <section class="show-article">
@@ -60,7 +58,12 @@ print_r($likeUser);
                         <input id="numMemb" class="form-control" type="number" value="1" name="numMemb" readonly="readonly" style="display:none;">
                         <input id="numMemb" class="form-control" type="number" value="<?php echo ($_SESSION['numMemb']); ?>" name="numMemb" readonly="readonly" style="display:none;">
                         <input id="numArt" class="form-control" type="number" min="0" max="3" value="<?php echo (intval($numArt)); ?>" name="numArt" readonly="readonly" style="display:none;">
-                        <button type="submit" class="btn">
+                        <button <?php 
+                        $likeCheck = sql_select('ARTICLE INNER JOIN LIKEART ON ARTICLE.numArt = LIKEART.numArt', 'likeA', "ARTICLE.numArt=$numArt")[0]['likeA'];
+                        if($likeCheck != 1){
+                        echo('type="submit"');
+                        }
+                        ?> class="btn">
                             <img src="/src/images/thumb_up_FILL0_wght400_GRAD0_opsz48.svg" alt="Image bouton aimer un commentaire">
                             <?php
                             echo (count($likes));
