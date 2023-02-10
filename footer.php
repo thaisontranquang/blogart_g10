@@ -9,7 +9,7 @@
                     <ul>
 
                         <li><a href="/index.php">Accueil</a></li>
-                        <li><a href="/views/frontend/all_articles.php">Nos articles</a></li>
+                        <li><a href="/views/frontend/all_articles.php?numThem=all">Nos articles</a></li>
                         <li><a href="/login.php">Se connecter / S'inscrire</a></li>
                     </ul>
                 </div>

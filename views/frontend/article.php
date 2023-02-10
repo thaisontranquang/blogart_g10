@@ -61,7 +61,7 @@ print_r($likeUser);
                         <input id="numMemb" class="form-control" type="number" value="<?php echo ($_SESSION['numMemb']); ?>" name="numMemb" readonly="readonly" style="display:none;">
                         <input id="numArt" class="form-control" type="number" min="0" max="3" value="<?php echo (intval($numArt)); ?>" name="numArt" readonly="readonly" style="display:none;">
                         <button type="submit" class="btn">
-                            <img src="/src/images/thumb_up_FILL0_wght400_GRAD0_opsz48.svg">
+                            <img src="/src/images/thumb_up_FILL0_wght400_GRAD0_opsz48.svg" alt="Image bouton aimer un commentaire">
                             <?php
                             echo (count($likes));
                             ?> J'aime(s)
