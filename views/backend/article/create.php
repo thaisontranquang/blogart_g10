@@ -72,7 +72,18 @@ $keywords = sql_select("MOTCLE", "*");
                     }
                     ?>
                 </select><br>
+
+                <div class="show-dropdown" style="display: none; position: absolute;">Passer devant moi</div>
+                <div class="dropdown">
+                <div class="checkbox-container">
+                    <input type="checkbox">Option 1<br>
+                    <input type="checkbox">Option 2<br>
+                    <input type="checkbox">Option 3<br>
+                </div>
+                </div>
+
                 
+
                 <div class="form-group">
                     <label for="file">Choisir une image pour votre article</label>
                     <input type="file" accept="image/png, image/jpeg" name="file" id="file" class="form-control" required>
@@ -85,3 +96,4 @@ $keywords = sql_select("MOTCLE", "*");
         </div>
     </div>
 </div>
+<script src="script.js"></script>
