@@ -69,4 +69,3 @@ La base de données fournie :
 
 > Utilisation de la technologie SCSS pour le style. 
 > Utilisation d'une librairie OpenSource sur github pour faciliter la manipulation des cookies en JavaScript lors de l'agrandissement/rétrécissement de la font-size du root : https://github.com/js-cookie/js-cookie/tree/latest#readme
-> 
