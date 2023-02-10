@@ -65,24 +65,18 @@ $keywords = sql_select("MOTCLE", "*");
                     <?php } ?>
                 </select><br>
                 
-
-                <!-- <label for="numMotCle_div">Sélectionner vos mots clés</label>
+                <label for="numMotCle_div">Sélectionner vos mots clés</label>
                 <div name="numMotCle_div" style="max-height: 150px; overflow: auto" >
                     <?php foreach ($keywords as $keyword) { ?>
-                        <input name="numMotCle" type="checkbox" value="<?php echo $keyword['numMotCle'];?>"><?php echo $keyword['libMotCle']; ?><br>
+                        <input type="checkbox" name="keyword[]" value="<?php echo $keyword['numMotCle']; ?>">
+                        <?php echo $keyword['libMotCle']; ?><br>
                     <?php } ?>
-                </div>     -->
+                </div>    
                 
-                <?php foreach ($keywords as $keyword) { ?>
-                    <input type="checkbox" name="keyword[]" value="<?php echo $keyword['numMotCle']; ?>">
-                    <?php echo $keyword['libMotCle']; ?><br>
-                <?php } ?>
-                
-                        
-                <!-- <div class="form-group">
+                <div class="form-group">
                     <label for="file">Choisir une image pour votre article</label>
                     <input type="file" accept="image/png, image/jpeg" name="file" id="file" class="form-control" required>
-                </div> -->
+                </div>
 
                 <div class="form-group mt-2">
                     <button type="submit" name="submit" value="submit" class="btn btn-primary">Créer</button>
