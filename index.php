@@ -5,8 +5,8 @@ sql_connect();
 
 $articles = sql_select("ARTICLE", "*", "", "numArt DESC", 2);
 $latestArticles = sql_select("ARTICLE", "*", "", "numArt DESC", 10);
-
 ?>
+
 
 <section class="header">
     <div class="bartdeaux-header">
