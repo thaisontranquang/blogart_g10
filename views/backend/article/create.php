@@ -30,7 +30,11 @@ $keywords = sql_select("MOTCLE", "*");
                 <div class="form-group">
                     <label for="libChapoArt">Chapo</label>
                     <textarea id="libChapoArt" class="form-control" type="text" placeholder="Entrez votre chapo" required name="libChapoArt"></textarea>
-                </div>                
+                </div>     
+                <div class="form-group">
+                    <label for="libAccrochArt">Accroche</label>
+                    <textarea id="libAccrochArt" class="form-control" type="text" placeholder="Entrez votre accroche" required name="libAccrochArt"></textarea>
+                </div>           
                 <div class="form-group">
                     <label for="parag1Art">Premier paragraphe</label>
                     <textarea id="parag1Art" class="form-control" type="text" placeholder="Entrez votre paragraphe" required name="parag1Art"></textarea>

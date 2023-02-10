@@ -43,7 +43,7 @@ $members = sql_select("MEMBRE", "*");
                             <td><?php echo $member['pseudoMemb']; ?></td>
                             <?php 
                         if (check_access(1)) {?>
-                            <td><?php echo $member['passMemb']; ?></td>
+                            <td><?php echo (substr($member['passMemb'], 0, 20)); ?></td>
                             <td><?php echo $member['eMailMemb']; ?></td>
                             <td><?php echo $member['dtCreaMemb']; ?></td>     
                             <td><?php echo $member['numStat']; ?></td>

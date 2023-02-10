@@ -33,7 +33,7 @@ $dtModCom = sql_select("COMMENT", "dtModCom", "numCom = $numCom")[0]['dtModCom']
                     <label for="libCom">Editez un commentaire</label>
                     <input id="libCom" class="form-control" type="text" placeholder="Ecrivez votre commentaire" name="libCom" value="<?php echo $libCom ?>" required>
                     <input id="numCom" class="form-control" style="display: none" type="text" value="<?php echo $numCom ?>" name="numCom" readonly="readonly">
-                    <input id="dtModCom" class="form-control" style="display: none" type="text" value="<?php echo date('d-m-y h:i:s') ?>" name="dtModCom">
+                    <input id="dtModCom" class="form-control" style="display: none" type="text" value="<?php echo date('y-m-d h:i:s') ?>" name="dtModCom">
                     <label for="attModOk">Validation du commentaire:</label>
                     <br>
                     <select name="attModOk" id="attModOk">

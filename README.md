@@ -1,7 +1,7 @@
 README.md
 -----------------
 
-Projet MMI 2022
+Projet MMI 2023
 
 ## Fonctionnalités
 
@@ -18,7 +18,7 @@ Accessible depuis : /views/backend/dashboard.php
 
 **Identifiant localhost**
 
-> super-admin :
+> admin :
 > email : ??  
 > pass : ??
 > mdp : ???  
@@ -30,7 +30,7 @@ Accessible depuis : /views/backend/dashboard.php
 
 **Identifiant url iut (si différent de localhost)**
 
-> super-admin :
+> admin :
 > email : ??  
 > pass : ??
 > mdp : ???  
@@ -65,7 +65,7 @@ La base de données fournie :
 
 > Les likes sont affichés à tous les utilisateurs mais le sql_insert() est conditionné par la connexion ou non de l'utilisateur avec son compte. 
 
-### Pour les autres éléments petinents à nous préciser
+### Pour les autres éléments pertinents à nous préciser
 
 > Utilisation de la technologie SCSS pour le style. 
 > Utilisation d'une librairie OpenSource sur github pour faciliter la manipulation des cookies en JavaScript lors de l'agrandissement/rétrécissement de la font-size du root : https://github.com/js-cookie/js-cookie/tree/latest#readme
