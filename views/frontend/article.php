@@ -32,7 +32,7 @@ print_r($likeUser);
                 <p class="libChapoArt"><?php
                                         echo ($articles[0]['libChapoArt']);
                                         ?></p>
-                <img src="/src/images/Chaton.jpeg" alt="">
+                <img src="<?php echo($articles[0]['urlPhotArt']);?>" alt="">
                 <p><?php
                     echo ($articles[0]['libAccrochArt'] . ' ' . $articles[0]['parag1Art']);
                     ?></p>

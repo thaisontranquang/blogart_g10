@@ -25,7 +25,7 @@ $latestArticles = sql_select("ARTICLE", "*", "", "numArt DESC", 10);
             foreach ($articles as $article) {
                 echo ('
                 <div class="card">
-                    <img src="/src/images/index.jpeg" class="card-img-top" alt="Image dernière actualité">
+                    <img src="' . $article['urlPhotArt'] . '" class="card-img-top" alt="Image dernière actualité">
                     <div class="card-body">
                         <h5 class="card-title">' . $article['libTitrArt'] . '</h5>
                         <h6>le ' . $article['dtCreArt'] . '</h6>

@@ -87,11 +87,6 @@ $thematics = sql_select("THEMATIQUE", "*");
                     <?php echo $keyword['libMotCle']; ?><br>
                 <?php } ?>
 
-                <div class="form-group">
-                    <label for="file">Choisir une image pour votre article</label>
-                    <input type="file" name="file" id="file" class="form-control" required>
-                </div>
-
                 <div class="form-group mt-2">
                     <button type="submit" name="submit" value="submit" class="btn btn-danger">Confirmer l'édition ?</button>
                 </div>
