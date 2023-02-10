@@ -59,8 +59,8 @@ $keywords = sql_select('MOTCLEARTICLE INNER JOIN MOTCLE ON MOTCLEARTICLE.numMotC
                         <input id="numMemb" class="form-control" type="number" value="<?php echo ($_SESSION['numMemb']); ?>" name="numMemb" readonly="readonly" style="display:none;">
                         <input id="numArt" class="form-control" type="number" min="0" max="3" value="<?php echo (intval($numArt)); ?>" name="numArt" readonly="readonly" style="display:none;">
                         <button <?php 
-                        $likeCheck = sql_select('ARTICLE INNER JOIN LIKEART ON ARTICLE.numArt = LIKEART.numArt', 'likeA', "ARTICLE.numArt=$numArt")[0]['likeA'];
-                        if($likeCheck != 1){
+                        $likeCheck = sql_select('ARTICLE INNER JOIN LIKEART ON ARTICLE.numArt = LIKEART.numArt', 'likeA', "ARTICLE.numArt=$numArt");
+                        if($likeCheck['likeA'] != 1){
                         echo('type="submit"');
                         }
                         ?> class="btn">
