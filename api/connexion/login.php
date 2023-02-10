@@ -19,8 +19,11 @@ if (password_verify($passMemb, $correctPassMemb)) {
 } else {
     ?>
 
-<p>connexion échouée</p>
-
+<section class="register">
+<p>Connexion échouée <br>
+<a href="../../login.php" class="btn">Réessayer ?<img src="/src/images/chevron_right_FILL0_wght400_GRAD0_opsz48.svg" alt="Réessayer de se connecter ?"></a>
+</p>
+</section>
     <?php
 }
 

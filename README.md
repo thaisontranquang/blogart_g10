@@ -18,7 +18,7 @@ Accessible depuis : /views/backend/dashboard.php
 
 **Identifiant localhost**
 
-> admin :
+> admin : 
 > email : ??  
 > pass : ??
 > mdp : ???  
