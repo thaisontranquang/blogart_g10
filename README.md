@@ -18,44 +18,22 @@ Accessible depuis : /views/backend/dashboard.php
 
 **Identifiant localhost**
 
-> admin : 
-> email : ??  
-> pass : ??
-> mdp : ???  
+> admin : Marlène Dulaurans
+> email : admin@gmail.com
+> mdp : admin  
 
-> membre :
-> email : ??  
-> pass : ??
-> mdp : ???  
+> membre : Martine Bornerie
+> email : martine@gmail.com
+> mdp : membre  
 
 **Identifiant url iut (si différent de localhost)**
 
-> admin :
-> email : ??  
-> pass : ??
-> mdp : ???  
-
-> membre :
-> email : ??  
-> pass : ??
-> mdp : ???  
+> Hébergement non réalisé 
 
 ### Structure et règles de la Base de données
 
 La base de données fournie :
-=> la votre épurée et mise à jour
-
-### Pour les utilisteurs/super-admin
-
-> vous précisez tout ce qui vous semble pertinent
-
-### Pour les utilisteurs/membres
-
-> vous précisez tout ce qui vous semble pertinent
-
-### Pour les articles
-
-> idem
+=> Base de données avec 2 utilisateurs et 2 articles
 
 ### Pour les commentaires
 
