@@ -46,7 +46,7 @@ $latestArticles = sql_select("ARTICLE", "*", "", "numArt DESC", 10);
                 <div class="form-group">
                         <label class="text-champ">Adresse mail (champ obligatoire)</label>
                         <input id="eMailMemb" class="form-control" type="text" name="eMailMemb" placeholder="votremail@gmail.com" required>
-                        <label class="text-champ">Mot de passe (champgt obligatoire)</label>
+                        <label class="text-champ">Mot de passe (champ obligatoire)</label>
                         <input id="passMemb" class="form-control" type="password" name="passMemb" placeholder="Mot de passe" required>
                     </div>
                     <button type="submit" class="btn">Connexion</button>
