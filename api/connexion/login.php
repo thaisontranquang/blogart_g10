@@ -1,7 +1,7 @@
 <?php
 require_once '../../header.php';
 
-require_once $_SERVER['DOCUMENT_ROOT'] . '/config.php';
+require_once __DIR__ . '/../../config.php';
 
 $eMailMemb = sql_escape($_POST['eMailMemb']);
 $passMemb =  $_POST['passMemb'];

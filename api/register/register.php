@@ -1,6 +1,6 @@
 <?php require_once '../../header.php';
 
-require_once $_SERVER['DOCUMENT_ROOT'] . '/config.php';
+require_once __DIR__ . '/../../config.php';
 
 $nameMemb = sql_escape($_POST['nameMemb']);
 $surnameMemb = sql_escape($_POST['surnameMemb']);

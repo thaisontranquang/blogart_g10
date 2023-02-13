@@ -1,6 +1,6 @@
 <?php
 
-require_once $_SERVER['DOCUMENT_ROOT'] . '/config.php';
+require_once __DIR__ . '/../../config.php';;
 $libTitrArt = sql_escape($_POST["libTitrArt"]);
 $libChapoArt = sql_escape($_POST["libChapoArt"]);
 $parag1Art = sql_escape($_POST["parag1Art"]);

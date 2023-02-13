@@ -1,5 +1,5 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT'] . '/config.php';
+require_once __DIR__ . '/../../config.php';
 
 $numMemb = sql_escape($_POST['numMemb']);
 $prenomMemb = sql_escape($_POST['prenomMemb']);
