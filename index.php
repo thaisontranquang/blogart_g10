@@ -5,8 +5,8 @@ sql_connect();
 
 $articles = sql_select("ARTICLE", "*", "", "numArt DESC", 2);
 $latestArticles = sql_select("ARTICLE", "*", "", "numArt DESC", 10);
-
 ?>
+
 
 <section class="header">
     <div class="bartdeaux-header">
@@ -25,7 +25,7 @@ $latestArticles = sql_select("ARTICLE", "*", "", "numArt DESC", 10);
             foreach ($articles as $article) {
                 echo ('
                 <div class="card">
-                    <img src="/src/images/index.jpeg" class="card-img-top" alt="Image dernière actualité">
+                    <img src="' . $article['urlPhotArt'] . '" class="card-img-top" alt="Image dernière actualité">
                     <div class="card-body">
                         <h5 class="card-title">' . $article['libTitrArt'] . '</h5>
                         <h6>le ' . $article['dtCreArt'] . '</h6>
@@ -46,7 +46,7 @@ $latestArticles = sql_select("ARTICLE", "*", "", "numArt DESC", 10);
                 <div class="form-group">
                         <label class="text-champ">Adresse mail (champ obligatoire)</label>
                         <input id="eMailMemb" class="form-control" type="text" name="eMailMemb" placeholder="votremail@gmail.com" required>
-                        <label class="text-champ">Mot de passe (champgt obligatoire)</label>
+                        <label class="text-champ">Mot de passe (champ obligatoire)</label>
                         <input id="passMemb" class="form-control" type="password" name="passMemb" placeholder="Mot de passe" required>
                     </div>
                     <button type="submit" class="btn">Connexion</button>

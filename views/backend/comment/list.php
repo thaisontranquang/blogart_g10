@@ -25,7 +25,7 @@ $comments = sql_select("COMMENT", "*");
                         <th>Date de création du commentaire</th>
                         <th>Contenu du commentaire</th>
                         <th>Validation modérateur</th>
-                        <th>Dernière modification du code</th>
+                        <th>Dernière modification du commentaire</th>
                         <th>Commentaire négatif ?</th>
                         <th>N° article</th>
                         <th>N° membre</th>

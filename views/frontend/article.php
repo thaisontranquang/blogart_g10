@@ -7,8 +7,6 @@ $libThem = sql_select('ARTICLE INNER JOIN THEMATIQUE ON ARTICLE.numThem = THEMAT
 $comments = sql_select('ARTICLE INNER JOIN COMMENT ON ARTICLE.numArt = COMMENT.numArt', '*', "ARTICLE.numArt=$numArt");
 $likes = sql_select('ARTICLE INNER JOIN LIKEART ON ARTICLE.numArt = LIKEART.numArt', 'likeA', "ARTICLE.numArt=$numArt AND likeA = 1");
 $keywords = sql_select('MOTCLEARTICLE INNER JOIN MOTCLE ON MOTCLEARTICLE.numMotCle = MOTCLE.numMotCle', 'libMotCle', "MOTCLEARTICLE.numArt=$numArt");
-
-print_r($likeUser);
 ?>
 
 <section class="show-article">
@@ -32,7 +30,7 @@ print_r($likeUser);
                 <p class="libChapoArt"><?php
                                         echo ($articles[0]['libChapoArt']);
                                         ?></p>
-                <img src="/src/images/Chaton.jpeg" alt="">
+                <img src="<?php echo($articles[0]['urlPhotArt']);?>" alt="">
                 <p><?php
                     echo ($articles[0]['libAccrochArt'] . ' ' . $articles[0]['parag1Art']);
                     ?></p>

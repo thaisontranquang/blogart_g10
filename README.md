@@ -1,12 +1,12 @@
 README.md
 -----------------
 
-Projet MMI 2022
+Projet MMI 2023
 
 ## Fonctionnalités
 
-=> Implémentées : Blog responsive, pop-up acceptation cookies, CRUD articles, CRUD membres, CRUD likes, CRUD statuts, CRUD thématiques, CRUD commentaires, CRUD mots-clés, ajustement de la police selon utilisateur, inscription et connexion avec $_SESSION, affichage des derniers articles, affichage de tous les articles, affichage d'un article, affichage des articles par thématique
-=> Non implémentées : Suppression/édition d'un commentaire côté front-office, unliker un article côté front-office, modifier son pseudonyme, mode nuit, afficher mot de passe à l'inscription/la connexion.
+=> Implémentées : Blog responsive, pop-up acceptation cookies, CRUD articles, CRUD membres, CRUD likes, CRUD statuts, CRUD thématiques, CRUD commentaires, CRUD mots-clés, ajustement de la police selon utilisateur, inscription et connexion avec $_SESSION, affichage des derniers articles, affichage de tous les articles, affichage d'un article, affichage des articles par thématique, ajout d'une image dans un article.
+=> Non implémentées : Suppression/édition d'un commentaire côté front-office, unliker un article côté front-office, modifier son pseudonyme, mode nuit, afficher mot de passe à l'inscription/la connexion, modifier la photo d'un article. 
 
 ## Panel Admin
 
@@ -18,44 +18,22 @@ Accessible depuis : /views/backend/dashboard.php
 
 **Identifiant localhost**
 
-> super-admin :
-> email : ??  
-> pass : ??
-> mdp : ???  
+> admin : Marlène Dulaurans
+> email : admin@gmail.com
+> mdp : admin  
 
-> membre :
-> email : ??  
-> pass : ??
-> mdp : ???  
+> membre : Martine Bornerie
+> email : martine@gmail.com
+> mdp : membre  
 
 **Identifiant url iut (si différent de localhost)**
 
-> super-admin :
-> email : ??  
-> pass : ??
-> mdp : ???  
-
-> membre :
-> email : ??  
-> pass : ??
-> mdp : ???  
+> Hébergement non réalisé 
 
 ### Structure et règles de la Base de données
 
 La base de données fournie :
-=> la votre épurée et mise à jour
-
-### Pour les utilisteurs/super-admin
-
-> vous précisez tout ce qui vous semble pertinent
-
-### Pour les utilisteurs/membres
-
-> vous précisez tout ce qui vous semble pertinent
-
-### Pour les articles
-
-> idem
+=> Base de données avec 2 utilisateurs et 2 articles
 
 ### Pour les commentaires
 
@@ -65,7 +43,7 @@ La base de données fournie :
 
 > Les likes sont affichés à tous les utilisateurs mais le sql_insert() est conditionné par la connexion ou non de l'utilisateur avec son compte. 
 
-### Pour les autres éléments petinents à nous préciser
+### Pour les autres éléments pertinents à nous préciser
 
 > Utilisation de la technologie SCSS pour le style. 
 > Utilisation d'une librairie OpenSource sur github pour faciliter la manipulation des cookies en JavaScript lors de l'agrandissement/rétrécissement de la font-size du root : https://github.com/js-cookie/js-cookie/tree/latest#readme

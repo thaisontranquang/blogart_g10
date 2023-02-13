@@ -744,6 +744,19 @@ footer {
 
 }
 
+.register{
+    padding:$padding-desktop;
+    .btn{
+        background:$ba-third-color;
+        color:$ba-first-color;
+
+        img{
+            filter: invert(100%) sepia(21%) saturate(13%) hue-rotate(188deg) brightness(113%) contrast(90%);
+            height:25px;
+        }
+    }
+}
+
 //*RESPONSIVE*// 
 // Large devices (desktops, 992px and up)
 @media (max-width: 992px) {

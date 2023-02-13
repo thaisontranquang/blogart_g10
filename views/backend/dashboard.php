@@ -112,7 +112,3 @@ if (!check_access(2)) {
     </div>
 </div>
 </div>
-
-<?php
-include '../../footer.php';
-?>
